@@ -162,7 +162,7 @@ namespace HotelApp
                     bookingInfo.Text = booking.Name;
                     bookingInfo.Image = Utils.GetImageByRoomType(room.Type);   
 
-                    bookingDuration.Text = +(booking.To - form.OverviewDate).Days + 1 + " days";
+                    bookingDuration.Text = +(booking.To - form.OverviewDate).Days + 1 + " أيام";
                     if (roomStatusAtDate == RoomStatus.Occupied || roomStatusAtDate == RoomStatus.CheckedOut)
                     {
                         this.BackColor = Color.FromArgb(247, 247, 247);
@@ -180,7 +180,7 @@ namespace HotelApp
                 {
                     bookingInfo.Text = "غرفة شاغرة";
                     bookingInfo.Image = Utils.GetAvailableImageByTheme();
-                    bookingDuration.Text = "0 أيام";
+                    bookingDuration.Text = "0 يوم";
                     this.BackColor = Utils.MainThemeColor;
                     roomId.ForeColor = Color.White;
                     roomStatus.ForeColor = Color.White;

@@ -92,7 +92,7 @@
             this.bookingInfoLabel.Size = new System.Drawing.Size(240, 50);
             this.bookingInfoLabel.TabIndex = 1;
             this.bookingInfoLabel.Text = "معلومات الحجز";
-            this.bookingInfoLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bookingInfoLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // closeButton
             // 
@@ -122,7 +122,7 @@
             this.bookingStatusLabel.Size = new System.Drawing.Size(60, 40);
             this.bookingStatusLabel.TabIndex = 2;
             this.bookingStatusLabel.Text = "الحالة:";
-            this.bookingStatusLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bookingStatusLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // bookingStatusDropDown
             // 
@@ -197,12 +197,12 @@
             // manageStatusLabel
             // 
             this.manageStatusLabel.AutoSize = false;
-            this.manageStatusLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.manageStatusLabel.Location = new System.Drawing.Point(0, 0);
+            this.manageStatusLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.manageStatusLabel.Location = new System.Drawing.Point(120, 0);
             this.manageStatusLabel.Name = "manageStatusLabel";
             this.manageStatusLabel.Size = new System.Drawing.Size(150, 60);
             this.manageStatusLabel.TabIndex = 1;
-            this.manageStatusLabel.Text = "Change reservation";
+            this.manageStatusLabel.Text = "تغيير الحجز";
             this.manageStatusLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.manageStatusLabel.Click += new System.EventHandler(this.manageStatusLabel_Click);
             // 
@@ -216,7 +216,7 @@
             this.roomIdLabel.Size = new System.Drawing.Size(270, 60);
             this.roomIdLabel.TabIndex = 0;
             this.roomIdLabel.Text = "radLabel1";
-            this.roomIdLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.roomIdLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // bookingPriceLabel
             // 
@@ -229,7 +229,7 @@
             this.bookingPriceLabel.Size = new System.Drawing.Size(270, 59);
             this.bookingPriceLabel.TabIndex = 0;
             this.bookingPriceLabel.Text = "radLabel1";
-            this.bookingPriceLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bookingPriceLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // paymentSeparator
             // 

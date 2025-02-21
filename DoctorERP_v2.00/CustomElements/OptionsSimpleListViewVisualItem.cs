@@ -55,12 +55,12 @@ namespace HotelApp
             this.countElement.CustomFontSize = 10.5f;
             this.countElement.CustomFontStyle = FontStyle.Regular;
 
-            if (this.Data.Group.Text == "STAFF - SERVICE")
+            if (this.Data.Group.Text == "الموظفين - الخدمات")
             {
                 this.countImage.Image = null;
                 this.countElement.Text = GetRoomsByHouseKeeper(this.dataItem.Text);
             }
-            else if (this.Text == "Not assigned rooms")
+            else if (this.Text == "غرف غير مخصصة")
             {
                 this.countImage.Image = null;
                 this.countElement.Text = GetNotAssignedRooms();
@@ -107,7 +107,7 @@ namespace HotelApp
                     this.countImage.Image = Utils.GetRoomIconByHouseKeepingStatus(HouseKeepingStatus.InProgress);
                     this.countElement.Text = GetRoomsByHouseKeepingStatus(HouseKeepingStatus.InProgress);
                 }
-                else if (this.Text == "Repair")
+                else if (this.Text == "اصلاحات")
                 {
                     this.countImage.Image = DoctorERP_v2_00.Properties.Resources.repair_small;
                     this.countElement.Text = GetRoomsToRepair(true);
