@@ -126,9 +126,10 @@
             // roomDetailsSearchDropDown
             // 
             this.roomDetailsSearchDropDown.AutoSize = false;
+            this.roomDetailsSearchDropDown.DropDownAnimationEnabled = true;
             this.roomDetailsSearchDropDown.Location = new System.Drawing.Point(3, 14);
             this.roomDetailsSearchDropDown.Name = "roomDetailsSearchDropDown";
-            this.roomDetailsSearchDropDown.NullText = "Search by room# or guest name";
+            this.roomDetailsSearchDropDown.NullText = "البحث حسب رقم الغرفة أو اسم الضيف";
             // 
             // 
             // 
@@ -145,6 +146,7 @@
             this.statusLabel.Size = new System.Drawing.Size(1095, 60);
             this.statusLabel.TabIndex = 4;
             this.statusLabel.Text = "radLabel1";
+            this.statusLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // typeLabel
             // 
@@ -155,6 +157,7 @@
             this.typeLabel.Size = new System.Drawing.Size(100, 60);
             this.typeLabel.TabIndex = 3;
             this.typeLabel.Text = "radLabel1";
+            this.typeLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // roomIdLabel
             // 
@@ -165,6 +168,7 @@
             this.roomIdLabel.Size = new System.Drawing.Size(130, 60);
             this.roomIdLabel.TabIndex = 2;
             this.roomIdLabel.Text = "radLabel1";
+            this.roomIdLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // backButton
             // 
@@ -199,7 +203,7 @@
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(100, 24);
             this.updateButton.TabIndex = 11;
-            this.updateButton.Text = "Update";
+            this.updateButton.Text = "تحديث";
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // needsRepairsCheckBox
@@ -211,7 +215,7 @@
             this.needsRepairsCheckBox.Name = "needsRepairsCheckBox";
             this.needsRepairsCheckBox.Size = new System.Drawing.Size(270, 50);
             this.needsRepairsCheckBox.TabIndex = 0;
-            this.needsRepairsCheckBox.Text = "Needs repairs";
+            this.needsRepairsCheckBox.Text = "بحاجة إلى إصلاحات";
             // 
             // prioritySeparator
             // 
@@ -219,12 +223,12 @@
             this.prioritySeparator.Name = "prioritySeparator";
             this.prioritySeparator.Size = new System.Drawing.Size(230, 4);
             this.prioritySeparator.TabIndex = 10;
-            this.prioritySeparator.Text = "radSeparator2";
             // 
             // priorityDropDown
             // 
             this.priorityDropDown.AutoSize = false;
             this.priorityDropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.priorityDropDown.DropDownAnimationEnabled = true;
             this.priorityDropDown.Location = new System.Drawing.Point(0, 308);
             this.priorityDropDown.Name = "priorityDropDown";
             this.priorityDropDown.Size = new System.Drawing.Size(270, 40);
@@ -240,7 +244,8 @@
             this.priorityHeader.Name = "priorityHeader";
             this.priorityHeader.Size = new System.Drawing.Size(270, 50);
             this.priorityHeader.TabIndex = 8;
-            this.priorityHeader.Text = "Priority:";
+            this.priorityHeader.Text = "الأولوية:";
+            this.priorityHeader.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // statusSeparator
             // 
@@ -248,12 +253,12 @@
             this.statusSeparator.Name = "statusSeparator";
             this.statusSeparator.Size = new System.Drawing.Size(230, 4);
             this.statusSeparator.TabIndex = 7;
-            this.statusSeparator.Text = "radSeparator1";
             // 
             // statusDropDown
             // 
             this.statusDropDown.AutoSize = false;
             this.statusDropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statusDropDown.DropDownAnimationEnabled = true;
             this.statusDropDown.Location = new System.Drawing.Point(0, 218);
             this.statusDropDown.Name = "statusDropDown";
             this.statusDropDown.Size = new System.Drawing.Size(270, 40);
@@ -268,7 +273,8 @@
             this.statusHeaderLabel.Name = "statusHeaderLabel";
             this.statusHeaderLabel.Size = new System.Drawing.Size(270, 18);
             this.statusHeaderLabel.TabIndex = 5;
-            this.statusHeaderLabel.Text = "Status:";
+            this.statusHeaderLabel.Text = "الحالة:";
+            this.statusHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // houseKeepingHeaderLabel
             // 
@@ -279,7 +285,8 @@
             this.houseKeepingHeaderLabel.Name = "houseKeepingHeaderLabel";
             this.houseKeepingHeaderLabel.Size = new System.Drawing.Size(270, 50);
             this.houseKeepingHeaderLabel.TabIndex = 4;
-            this.houseKeepingHeaderLabel.Text = "HOUSE KEEPING STATUS";
+            this.houseKeepingHeaderLabel.Text = "حالة التدبير المنزلي";
+            this.houseKeepingHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // guestSeparator
             // 
@@ -287,7 +294,6 @@
             this.guestSeparator.Name = "guestSeparator";
             this.guestSeparator.Size = new System.Drawing.Size(250, 4);
             this.guestSeparator.TabIndex = 3;
-            this.guestSeparator.Text = "radSeparator1";
             // 
             // addGuestPanel
             // 
@@ -303,16 +309,17 @@
             // 
             this.addGuestLabel.AutoSize = false;
             this.addGuestLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addGuestLabel.Location = new System.Drawing.Point(30, 0);
+            this.addGuestLabel.Location = new System.Drawing.Point(0, 0);
             this.addGuestLabel.Name = "addGuestLabel";
             this.addGuestLabel.Size = new System.Drawing.Size(240, 50);
             this.addGuestLabel.TabIndex = 4;
-            this.addGuestLabel.Text = "Add guest";
+            this.addGuestLabel.Text = "إضافة نزيل";
+            this.addGuestLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // addGuestButton
             // 
-            this.addGuestButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.addGuestButton.Location = new System.Drawing.Point(0, 0);
+            this.addGuestButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.addGuestButton.Location = new System.Drawing.Point(240, 0);
             this.addGuestButton.Name = "addGuestButton";
             this.addGuestButton.Size = new System.Drawing.Size(30, 50);
             this.addGuestButton.TabIndex = 3;
@@ -335,6 +342,7 @@
             this.guestNameLabel.Name = "guestNameLabel";
             this.guestNameLabel.Size = new System.Drawing.Size(170, 50);
             this.guestNameLabel.TabIndex = 1;
+            this.guestNameLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // roomIconLabel
             // 
@@ -344,6 +352,7 @@
             this.roomIconLabel.Name = "roomIconLabel";
             this.roomIconLabel.Size = new System.Drawing.Size(100, 50);
             this.roomIconLabel.TabIndex = 0;
+            this.roomIconLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // guestHeaderPanel
             // 
@@ -359,16 +368,17 @@
             // 
             this.guestHeaderLabel.AutoSize = false;
             this.guestHeaderLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guestHeaderLabel.Location = new System.Drawing.Point(0, 0);
+            this.guestHeaderLabel.Location = new System.Drawing.Point(30, 0);
             this.guestHeaderLabel.Name = "guestHeaderLabel";
             this.guestHeaderLabel.Size = new System.Drawing.Size(240, 50);
             this.guestHeaderLabel.TabIndex = 1;
-            this.guestHeaderLabel.Text = "GUEST";
+            this.guestHeaderLabel.Text = "نزيل";
+            this.guestHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // closeButton
             // 
-            this.closeButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closeButton.Location = new System.Drawing.Point(240, 0);
+            this.closeButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.closeButton.Location = new System.Drawing.Point(0, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(30, 50);
             this.closeButton.TabIndex = 0;
@@ -386,9 +396,9 @@
             // 
             // roomsScheduler
             // 
-            this.roomsScheduler.Culture = new System.Globalization.CultureInfo("en-US");
+            this.roomsScheduler.Culture = new System.Globalization.CultureInfo("ar-EG");
             this.roomsScheduler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roomsScheduler.Location = new System.Drawing.Point(0, 77);
+            this.roomsScheduler.Location = new System.Drawing.Point(0, 78);
             this.roomsScheduler.Name = "roomsScheduler";
             schedulerDailyPrintStyle1.AppointmentFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             schedulerDailyPrintStyle1.DateEndRange = new System.DateTime(2017, 7, 10, 0, 0, 0, 0);
@@ -396,9 +406,8 @@
             schedulerDailyPrintStyle1.DateStartRange = new System.DateTime(2017, 7, 5, 0, 0, 0, 0);
             schedulerDailyPrintStyle1.PageHeadingFont = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
             this.roomsScheduler.PrintStyle = schedulerDailyPrintStyle1;
-            this.roomsScheduler.Size = new System.Drawing.Size(1090, 663);
+            this.roomsScheduler.Size = new System.Drawing.Size(1090, 662);
             this.roomsScheduler.TabIndex = 1;
-            this.roomsScheduler.Text = "radScheduler1";
             // 
             // roomsSchedulerNavigator
             // 
@@ -412,9 +421,8 @@
             // 
             // 
             this.roomsSchedulerNavigator.RootElement.StretchVertically = false;
-            this.roomsSchedulerNavigator.Size = new System.Drawing.Size(1090, 77);
+            this.roomsSchedulerNavigator.Size = new System.Drawing.Size(1090, 78);
             this.roomsSchedulerNavigator.TabIndex = 0;
-            this.roomsSchedulerNavigator.Text = "radSchedulerNavigator1";
             // 
             // RoomDetailsUC
             // 
@@ -424,6 +432,7 @@
             this.Controls.Add(this.guestPanel);
             this.Controls.Add(this.headerPanel);
             this.Name = "RoomDetailsUC";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(1360, 800);
             ((System.ComponentModel.ISupportInitialize)(this.headerPanel)).EndInit();
             this.headerPanel.ResumeLayout(false);

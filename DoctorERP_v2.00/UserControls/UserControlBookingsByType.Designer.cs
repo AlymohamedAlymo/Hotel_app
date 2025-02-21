@@ -51,7 +51,6 @@
             this.bookingsByTypeChartView.ShowGrid = false;
             this.bookingsByTypeChartView.Size = new System.Drawing.Size(300, 300);
             this.bookingsByTypeChartView.TabIndex = 0;
-            this.bookingsByTypeChartView.Text = "radChartView1";
             // 
             // bookingsByRoomTypeChartView
             // 
@@ -62,7 +61,6 @@
             this.bookingsByRoomTypeChartView.ShowGrid = false;
             this.bookingsByRoomTypeChartView.Size = new System.Drawing.Size(300, 300);
             this.bookingsByRoomTypeChartView.TabIndex = 1;
-            this.bookingsByRoomTypeChartView.Text = "radChartView1";
             // 
             // availabilityChartView
             // 
@@ -73,7 +71,6 @@
             this.availabilityChartView.ShowGrid = false;
             this.availabilityChartView.Size = new System.Drawing.Size(300, 300);
             this.availabilityChartView.TabIndex = 2;
-            this.availabilityChartView.Text = "radChartView1";
             // 
             // averageChartView
             // 
@@ -84,7 +81,6 @@
             this.averageChartView.ShowGrid = false;
             this.averageChartView.Size = new System.Drawing.Size(420, 300);
             this.averageChartView.TabIndex = 3;
-            this.averageChartView.Text = "averageStayChartView";
             // 
             // UserControlBookingsByType
             // 
@@ -95,6 +91,7 @@
             this.Controls.Add(this.bookingsByRoomTypeChartView);
             this.Controls.Add(this.bookingsByTypeChartView);
             this.Name = "UserControlBookingsByType";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(1320, 300);
             ((System.ComponentModel.ISupportInitialize)(this.bookingsByTypeChartView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsByRoomTypeChartView)).EndInit();

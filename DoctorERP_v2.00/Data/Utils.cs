@@ -206,6 +206,44 @@ namespace HotelApp.Data
                     return "غير متاح";
             }
         }
+        internal static string GetBookingStatus(BookingStatus bookingStatus)
+        {
+            switch (bookingStatus)
+            {
+                case BookingStatus.Actual:
+                    return "فِعلي";
+                case BookingStatus.Cancelled:
+                    return "تم الإلغاء";
+                case BookingStatus.CheckedOut:
+                    return "تم الخروج";
+                case BookingStatus.NoShow:
+                    return "لا يوجد عرض";
+                case BookingStatus.Reservation:
+                    return "حجز";
+
+                default:
+                    return "غير متاح";
+            }
+        }
+        internal static string GetBookingStatusStr(string bookingStatus)
+        {
+            switch (bookingStatus)
+            {
+                case "فِعلي":
+                    return "Actual";
+                case "تم الإلغاء":
+                    return "Cancelled";
+                case "تم الخروج":
+                    return "CheckedOut";
+                case "لا يوجد عرض":
+                    return "NoShow";
+                case "حجز":
+                    return "Reservation";
+
+                default:
+                    return "غير متاح";
+            }
+        }
 
         internal static System.Drawing.Image GetRoomImageByRoomType(RoomType roomType)
         {

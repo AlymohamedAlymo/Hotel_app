@@ -24,6 +24,7 @@ namespace HotelApp
         {
             #region HouseKeeping
 
+            this.RightToLeft = RightToLeft.Yes;
             this.houseKeepingNavigationPanel.BackgroundImage = DoctorERP_v2_00.Properties.Resources.fasha_no_borders;
             this.houseKeepingNavigationPanel.BackgroundImageLayout = ImageLayout.Stretch;
             this.houseKeepingNavigationPanel.PanelElement.PanelBorder.Visibility = ElementVisibility.Collapsed;
@@ -114,21 +115,21 @@ namespace HotelApp
 
             AppointmentStatusInfo.DefaultStatusId = -1;
             this.houseKeepingScheduler.Statuses.Clear();
-            this.houseKeepingScheduler.Statuses.Add(new AppointmentStatusInfo(1, "Clean", Color.Green, Color.Transparent, AppointmentStatusFillType.Solid));
-            this.houseKeepingScheduler.Statuses.Add(new AppointmentStatusInfo(2, "NotClean", Color.Red, Color.Transparent, AppointmentStatusFillType.Solid));
-            this.houseKeepingScheduler.Statuses.Add(new AppointmentStatusInfo(3, "InProgress", Color.Yellow, Color.Transparent, AppointmentStatusFillType.Solid));
+            this.houseKeepingScheduler.Statuses.Add(new AppointmentStatusInfo(1, "نظيف", Color.Green, Color.Transparent, AppointmentStatusFillType.Solid));
+            this.houseKeepingScheduler.Statuses.Add(new AppointmentStatusInfo(2, "غيؤ نظيف", Color.Red, Color.Transparent, AppointmentStatusFillType.Solid));
+            this.houseKeepingScheduler.Statuses.Add(new AppointmentStatusInfo(3, "قيد التقدم", Color.Yellow, Color.Transparent, AppointmentStatusFillType.Solid));
 
             this.houseKeepingScheduler.Backgrounds.Clear();
 
-            AppointmentBackgroundInfo lowBackgroundInfo = new AppointmentBackgroundInfo(1, "Low", Color.Wheat, Color.Wheat);
+            AppointmentBackgroundInfo lowBackgroundInfo = new AppointmentBackgroundInfo(1, "منخفض", Color.Wheat, Color.Wheat);
             lowBackgroundInfo.ShadowWidth = 0;
             this.houseKeepingScheduler.Backgrounds.Add(lowBackgroundInfo);
 
-            AppointmentBackgroundInfo mediumBackgroundInfo = new AppointmentBackgroundInfo(2, "Medium", Color.Salmon, Color.Salmon);
+            AppointmentBackgroundInfo mediumBackgroundInfo = new AppointmentBackgroundInfo(2, "متوسط", Color.Salmon, Color.Salmon);
             mediumBackgroundInfo.ShadowWidth = 0;
             this.houseKeepingScheduler.Backgrounds.Add(mediumBackgroundInfo);
 
-            AppointmentBackgroundInfo highBackgroundInfo = new AppointmentBackgroundInfo(3, "High", Color.OrangeRed, Color.OrangeRed);
+            AppointmentBackgroundInfo highBackgroundInfo = new AppointmentBackgroundInfo(3, "مرتفع", Color.OrangeRed, Color.OrangeRed);
             highBackgroundInfo.ShadowWidth = 0;
             this.houseKeepingScheduler.Backgrounds.Add(highBackgroundInfo);
 
@@ -151,11 +152,11 @@ namespace HotelApp
             this.houseKeepingListView.VisualItemCreating += houseKeepingListView_VisualItemCreating;
             this.houseKeepingListView.VisualItemFormatting += leftView_VisualItemFormatting;
             ListViewDataItemGroup houseKeepingGroup = new ListViewDataItemGroup();
-            houseKeepingGroup.Text = "HOUSE KEEPING";
+            houseKeepingGroup.Text = "التدبير المنزل";
             ListViewDataItemGroup houseKeepersGroup = new ListViewDataItemGroup();
-            houseKeepersGroup.Text = "STAFF - SERVICE";
+            houseKeepersGroup.Text = "الموظفين - الخدمات";
             ListViewDataItemGroup notAssignedGroup = new ListViewDataItemGroup();
-            notAssignedGroup.Text = "Not assigned";
+            notAssignedGroup.Text = "غير مخصص";
 
             this.houseKeepingListView.Groups.AddRange(new ListViewDataItemGroup[] { houseKeepingGroup, houseKeepersGroup, notAssignedGroup });
             this.houseKeepingListView.ShowGroups = true;
@@ -178,13 +179,13 @@ namespace HotelApp
                 this.houseKeepingListView.Items.Add(resourceItem);
                 resourceItem.Group = houseKeepersGroup;
             }
-            ListViewDataItem needsRepairItem = new ListViewDataItem("Repair");
+            ListViewDataItem needsRepairItem = new ListViewDataItem("اصلاحات");
             needsRepairItem.CheckState = Telerik.WinControls.Enumerations.ToggleState.Off;
             this.houseKeepingListView.Items.Add(needsRepairItem);
             needsRepairItem.Group = houseKeepingGroup;
 
             ListViewDataItem notAssignedItem = new ListViewDataItem();
-            notAssignedItem.Value = "Not assigned rooms";
+            notAssignedItem.Value = "غرف غير مخصصة";
             notAssignedItem.CheckState = Telerik.WinControls.Enumerations.ToggleState.On;
             this.houseKeepingListView.Items.Add(notAssignedItem);
             notAssignedItem.Group = notAssignedGroup;
@@ -292,7 +293,7 @@ namespace HotelApp
         {
             if (args.ToggleState == ToggleState.On)
             {
-                this.houseKeepingSchedulerHeaderLabel.Text = "3 Days";
+                this.houseKeepingSchedulerHeaderLabel.Text = "3 أيام";
                 this.houseKeepingWeeklyToggleButton.ToggleState = ToggleState.Off;
                 this.houseKeepingMonthlyToggleButton.ToggleState = ToggleState.Off;
                 this.houseKeepingScheduler.ActiveViewType = SchedulerViewType.Day;
@@ -303,7 +304,7 @@ namespace HotelApp
         {
             if (args.ToggleState == ToggleState.On)
             {
-                this.houseKeepingSchedulerHeaderLabel.Text = "Weekly";
+                this.houseKeepingSchedulerHeaderLabel.Text = "أسبوعي";
                 this.houseKeepingDaysToggleButton.ToggleState = ToggleState.Off;
                 this.houseKeepingMonthlyToggleButton.ToggleState = ToggleState.Off;
                 this.houseKeepingScheduler.ActiveViewType = SchedulerViewType.Week;
@@ -314,7 +315,7 @@ namespace HotelApp
         {
             if (args.ToggleState == ToggleState.On)
             {
-                this.houseKeepingSchedulerHeaderLabel.Text = "Monthly";
+                this.houseKeepingSchedulerHeaderLabel.Text = "شهريا";
                 this.houseKeepingDaysToggleButton.ToggleState = ToggleState.Off;
                 this.houseKeepingWeeklyToggleButton.ToggleState = ToggleState.Off;
                 this.houseKeepingScheduler.ActiveViewType = SchedulerViewType.Month;
@@ -328,7 +329,7 @@ namespace HotelApp
 
         private void houseKeepingListView_ItemCheckedChanged(object sender, ListViewItemEventArgs e)
         {
-            if (e.Item.Text == "Not assigned rooms")
+            if (e.Item.Text == "غرف غير مخصصة")
             {
                 if (e.Item.CheckState == ToggleState.On)
                 {
@@ -349,7 +350,7 @@ namespace HotelApp
             SchedulerBindingDataSource schedulerSource = this.houseKeepingScheduler.DataSource as SchedulerBindingDataSource;
             BindingList<HouseKeeper> houseKeepersSource = schedulerSource.ResourceProvider.DataSource as BindingList<HouseKeeper>;
             List<HouseKeeper> toDelete = new List<HouseKeeper>();
-            if (group.Text == "STAFF - SERVICE")
+            if (group.Text == "الموظفين - الخدمات")
             {
                 if (toggleState == ToggleState.Off)
                 {
@@ -382,7 +383,7 @@ namespace HotelApp
                     }
                 }
             }
-            else if (group.Text == "HOUSE KEEPING")
+            else if (group.Text == "التدبير المنزل")
             {
                 bool repair = false;
                 ListViewDataItem item = group.Items.FirstOrDefault<ListViewDataItem>(i => i.CheckState == ToggleState.On && i.Text == "Repair");
@@ -398,7 +399,7 @@ namespace HotelApp
                 r.Color = Color.White;
             }
 
-            if (group.Text == "STAFF - SERVICE")
+            if (group.Text == "الموظفين - الخدمات")
             {
                 ListViewDataItem houseKeepingItem = group.Items.FirstOrDefault<ListViewDataItem>(i => i.CheckState == ToggleState.On);
                 if (houseKeepingItem == null)
@@ -542,7 +543,7 @@ namespace HotelApp
                 e.CellElement.ResetValue(LightVisualElement.BackColorProperty, ValueResetFlags.Local);
                 e.CellElement.ResetValue(LightVisualElement.OpacityProperty, ValueResetFlags.Local);
             }
-            if (e.CellElement.Text == "Local")
+            if (e.CellElement.Text == "محلي")
             {
                 e.CellElement.Text = string.Empty;
             }

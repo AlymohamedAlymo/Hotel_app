@@ -26,7 +26,7 @@ namespace HotelApp
         {
             foreach (Room r in rooms)
             {
-                this.Items.Add("Room#" + r.Name);
+                this.Items.Add("غرفة#" + r.Name);
             }
             foreach (Booking b in bookings)
             {
@@ -53,7 +53,7 @@ namespace HotelApp
             searchIcon.CustomFont = "TelerikWebUI";
             searchIcon.CustomFontSize = 12;
             searchIcon.ForeColor = Color.Gray;
-            this.NullText = "Search by room# or guest name";
+            this.NullText = "البحث حسب رقم الغرفة أو اسم النزيل";
             this.RootElement.EnableElementShadow = false;
             StackLayoutElement stackPanel = new StackLayoutElement();
             stackPanel.Orientation = Orientation.Horizontal;

@@ -67,7 +67,7 @@ namespace HotelApp
             
         public override bool IsCompatible(GridViewColumn data, object context)
         {
-            return data.Name == "RoomId" && context is GridViewDataRowInfo;
+            return data.Name == "معرف الغرفة" && context is GridViewDataRowInfo;
         }
     }
     

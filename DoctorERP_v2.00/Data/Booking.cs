@@ -154,7 +154,7 @@ namespace HotelApp
         {
             get
             {
-                return "Room#" + this.RoomId + " " + this.Name + " " + this.From.ToShortDateString() + "-" + this.To.ToShortDateString();
+                return "غرفة#" + this.RoomId + " " + this.Name + " " + this.From.ToShortDateString() + "-" + this.To.ToShortDateString();
             }
         }
         

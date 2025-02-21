@@ -20,6 +20,7 @@ namespace HotelApp
         #region Initialization
         private void InitSchedulePage()
         {
+            this.RightToLeft = RightToLeft.Yes;
             this.scheduleRadSchedulerHeader.PanelElement.PanelBorder.Visibility = ElementVisibility.Collapsed;
             this.scheduleHeaderPanel.BackgroundImage = DoctorERP_v2_00.Properties.Resources.fasha_no_borders;
             this.scheduleHeaderPanel.BackgroundImageLayout = ImageLayout.Stretch;
@@ -37,16 +38,16 @@ namespace HotelApp
             this.scheduleListView.EnableCustomGrouping = true;
             this.scheduleListView.ListViewElement.Padding = new System.Windows.Forms.Padding(0, 16, 0, 0);
             ListViewDataItemGroup scheduleStatusGroup = new ListViewDataItemGroup();
-            scheduleStatusGroup.Text = "STATUS";
+            scheduleStatusGroup.Text = "الحالة";
             ListViewDataItemGroup scheduleTypesGroup = new ListViewDataItemGroup();
-            scheduleTypesGroup.Text = "TYPE";
+            scheduleTypesGroup.Text = "النوع";
             this.scheduleListView.ShowCheckBoxes = true;
             this.scheduleListView.Groups.AddRange(new ListViewDataItemGroup[] { scheduleStatusGroup, scheduleTypesGroup });
 
             Array scheduleStatusOptions = Enum.GetValues(typeof(RoomStatus));
             foreach (object item in scheduleStatusOptions)
             {
-                ListViewDataItem statusItem = new ListViewDataItem(item.ToString());
+                ListViewDataItem statusItem = new ListViewDataItem(Utils.GetRoomStatus((RoomStatus)item));
                 statusItem.CheckState = Telerik.WinControls.Enumerations.ToggleState.On;
                 this.scheduleListView.Items.Add(statusItem);
                 statusItem.Group = scheduleStatusGroup;
@@ -56,7 +57,6 @@ namespace HotelApp
             foreach (object item in roomOptions)
             {
                 ListViewDataItem roomTypeItem = new ListViewDataItem(Utils.GetRoomType((RoomType)item));
-                roomTypeItem.Value = (RoomType)item;
                 roomTypeItem.CheckState = Telerik.WinControls.Enumerations.ToggleState.On;
                 roomTypeItem.Group = scheduleTypesGroup;
                 this.scheduleListView.Items.Add(roomTypeItem);
@@ -126,19 +126,19 @@ namespace HotelApp
 
             this.ScheduleRadScheduler.Backgrounds.Clear();
 
-            AppointmentBackgroundInfo reservationBackgroundInfo = new AppointmentBackgroundInfo(1, "Reservation", Color.Yellow, Color.Yellow);
+            AppointmentBackgroundInfo reservationBackgroundInfo = new AppointmentBackgroundInfo(1, "حجز", Color.Yellow, Color.Yellow);
             reservationBackgroundInfo.ShadowWidth = 0;
             this.ScheduleRadScheduler.Backgrounds.Add(reservationBackgroundInfo);
-            AppointmentBackgroundInfo actualBackgroundInfo = new AppointmentBackgroundInfo(2, "Actual", Color.Green, Color.Green);
+            AppointmentBackgroundInfo actualBackgroundInfo = new AppointmentBackgroundInfo(2, "فِعلي", Color.Green, Color.Green);
             actualBackgroundInfo.ShadowWidth = 0;
             this.ScheduleRadScheduler.Backgrounds.Add(actualBackgroundInfo);
-            AppointmentBackgroundInfo cancelledBackgroundInfo = new AppointmentBackgroundInfo(3, "Cancelled", Color.OrangeRed, Color.OrangeRed);
+            AppointmentBackgroundInfo cancelledBackgroundInfo = new AppointmentBackgroundInfo(3, "تم الإلغاء", Color.OrangeRed, Color.OrangeRed);
             cancelledBackgroundInfo.ShadowWidth = 0;
             this.ScheduleRadScheduler.Backgrounds.Add(cancelledBackgroundInfo);
-            AppointmentBackgroundInfo checkedOutBackgroundInfo = new AppointmentBackgroundInfo(4, "CheckedOut", Color.Orange, Color.Orange);
+            AppointmentBackgroundInfo checkedOutBackgroundInfo = new AppointmentBackgroundInfo(4, "تم الخروج", Color.Orange, Color.Orange);
             checkedOutBackgroundInfo.ShadowWidth = 0;
             this.ScheduleRadScheduler.Backgrounds.Add(checkedOutBackgroundInfo);
-            AppointmentBackgroundInfo noShowBackgroundInfo = new AppointmentBackgroundInfo(5, "NoShow", Utils.MainThemeColor, Utils.MainThemeColor);
+            AppointmentBackgroundInfo noShowBackgroundInfo = new AppointmentBackgroundInfo(5, "لا يوجد عرض", Utils.MainThemeColor, Utils.MainThemeColor);
             noShowBackgroundInfo.ShadowWidth = 0;
             this.ScheduleRadScheduler.Backgrounds.Add(noShowBackgroundInfo);
 
@@ -244,10 +244,10 @@ namespace HotelApp
             if (b != null)
             {
                 TimeSpan duration = b.To - b.From;
-                e.AppointmentElement.Text = b.Name + " - " + duration.TotalDays + " day";
+                e.AppointmentElement.Text = b.Name + " - " + duration.TotalDays + " يوم";
                 if (duration.TotalDays > 1)
                 {
-                    e.AppointmentElement.Text += "s";
+                    e.AppointmentElement.Text = e.AppointmentElement.Text.Replace("يوم", "أيام");
                 }
                 e.AppointmentElement.DisableHTMLRendering = true;
                 e.AppointmentElement.CustomFont = Utils.MainFont;
@@ -343,7 +343,7 @@ namespace HotelApp
         {
             if (args.ToggleState == ToggleState.On)
             {
-                this.scheduleRadSchedulerHeader.Text = "Monthly";
+                this.scheduleRadSchedulerHeader.Text = "شهريا";
                 this.scheduleDaysButton.ToggleState = ToggleState.Off;
                 this.scheduleWeeklyButton.ToggleState = ToggleState.Off;
                 this.ScheduleRadScheduler.ActiveViewType = SchedulerViewType.Month;
@@ -354,7 +354,7 @@ namespace HotelApp
         {
             if (args.ToggleState == ToggleState.On)
             {
-                this.scheduleRadSchedulerHeader.Text = "Weekly";
+                this.scheduleRadSchedulerHeader.Text = "أسبوعي";
                 this.scheduleDaysButton.ToggleState = ToggleState.Off;
                 this.scheduleMonthlyButton.ToggleState = ToggleState.Off;
                 this.ScheduleRadScheduler.ActiveViewType = SchedulerViewType.Timeline;
@@ -366,7 +366,7 @@ namespace HotelApp
         {
             if (args.ToggleState == ToggleState.On)
             {
-                this.scheduleRadSchedulerHeader.Text = "3 Days";
+                this.scheduleRadSchedulerHeader.Text = "3 أيام";
                 this.scheduleWeeklyButton.ToggleState = ToggleState.Off;
                 this.scheduleMonthlyButton.ToggleState = ToggleState.Off;
                 this.ScheduleRadScheduler.ActiveViewType = SchedulerViewType.Timeline;

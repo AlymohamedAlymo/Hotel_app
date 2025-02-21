@@ -13,6 +13,7 @@ namespace HotelApp
         #region Initialization
         private void InitReportsPage()
         {
+            this.RightToLeft = RightToLeft.Yes;
             this.reportsHeaderPanel.BackgroundImage = DoctorERP_v2_00.Properties.Resources.fasha_no_borders_fullsize;
             this.reportsHeaderPanel.BackgroundImageLayout = ImageLayout.Stretch;
             this.reportsHeaderPanel.PanelElement.PanelBorder.Visibility = ElementVisibility.Collapsed;

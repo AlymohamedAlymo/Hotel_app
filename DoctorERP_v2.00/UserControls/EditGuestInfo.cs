@@ -175,14 +175,14 @@ namespace CustomControls
             this.saveButton.ButtonElement.CustomFontSize = 10.5f;
             this.saveButton.ButtonElement.ForeColor = Color.FromArgb(33, 33, 33);
 
-            this.idTextBox.NullText = "Enter ID";
-            this.nameTextBox.NullText = "Enter name";
-            this.addressTextBox.NullText = "Enter address";
-            this.cityTextBox.NullText = "Enter city";
-            this.phoneTextBox.NullText = "Enter phone";
-            this.creditCardNumberTexBox.NullText = "Enter credit card id";
+            this.idTextBox.NullText = "أدخل معرف";
+            this.nameTextBox.NullText = "أدخل الاسم";
+            this.addressTextBox.NullText = "أدخل العنوان";
+            this.cityTextBox.NullText = "أدخل المدينة";
+            this.phoneTextBox.NullText = "أدخل رقم الهاتف";
+            this.creditCardNumberTexBox.NullText = "أدخل معرف بطاقة الائتمان";
             this.validDateTimePicker.Value = DateTime.Today;
-            this.ccvTextBox.NullText = "Enter ccv";
+            this.ccvTextBox.NullText = "أدخل رمز بطاقة الائتمان";
         }
 
         public Guest CurrentGuest
@@ -218,7 +218,7 @@ namespace CustomControls
             {
                 return;
             }
-            this.guestInfoLabel.Text = "EDIT GUEST INFORMATION";
+            this.guestInfoLabel.Text = "تعديل معلومات النزيل";
             this.idTextBox.Text = guest.Id;
             this.nameTextBox.Text = guest.Name;
             this.addressTextBox.Text = guest.Address;
@@ -280,38 +280,38 @@ namespace CustomControls
             this.errorLabel.ForeColor = Color.Red;
             if (this.nameTextBox.Text == "")
             {
-                this.errorLabel.Text = "Name is not allowed to be empty!";
+                this.errorLabel.Text = "لا يجوز أن يكون الإسم فارغا!";
                 return false;
             }
             if (this.idTextBox.Text == "")
             {
-                this.errorLabel.Text = "Id is not allowed to be empty!";
+                this.errorLabel.Text = "لا يجوز أن يكون المعرف فارغا!";
                 return false;
             }
             if (this.addressTextBox.Text == "")
             {
-                this.errorLabel.Text = "Address is not allowed to be empty!";
+                this.errorLabel.Text = "لا يجوز أن يكون العنوان فارغا!";
                 return false;
             }
             if (this.cityTextBox.Text == "")
             {
-                this.errorLabel.Text = "City is not allowed to be empty!";
+                this.errorLabel.Text = "لا يجوز أن تكون المدينة فارغة!";
                 return false;
             }
             if (this.phoneTextBox.Text == "")
             {
-                this.errorLabel.Text = "Phone is not allowed to be empty!";
+                this.errorLabel.Text = "لا يجوز أن يكون الهاتف فارغا!";
                 return false;
             }
             if (this.creditCardNumberTexBox.Text == "")
             {
-                this.errorLabel.Text = "Credit card # is not allowed to be empty!";
+                this.errorLabel.Text = "لا يجوز أن يكون رقم بطاقة الائتمان فارغًا!";
                 return false;
             }
             uint ccv = 0;
             if (!uint.TryParse(this.ccvTextBox.Text, out ccv))
             {
-                this.errorLabel.Text = "CCV is not allowed to be empty!";
+                this.errorLabel.Text = "لا يجوز أن يكون CCV فارغًا!";
                 return false;
             }
             return true;

@@ -222,7 +222,7 @@ namespace CustomControls
             this.manageStatusLabel.ForeColor = Utils.MainThemeColor;
             this.roomIdLabel.ForeColor = Utils.MainThemeColor;
             this.Booking = booking;
-            this.bookingInfoLabel.Text = "  BOOKING #" + booking.Id;
+            this.bookingInfoLabel.Text = "  الحجز #" + booking.Id;
             
             Room room = Utils.GetRoomById(booking.RoomId, rooms);
             this.Room = room;
@@ -232,7 +232,7 @@ namespace CustomControls
             this.bookingNameLabel.Text = booking.Name;
             this.bookingRoomTypeIcon.Image = Utils.GetImageByRoomType(room.Type);
             this.bookingStatusDropDown.SelectedValue = this.Booking.Status;
-            this.roomIdLabel.Text = " Room " + room.Id;
+            this.roomIdLabel.Text = " غرفة " + room.Id;
             this.bookingPriceLabel.Text = "<html><size=15>$" + booking.Price + "<size=10.5> Payment";
             
             this.bookingDatesGrid.EnableGrouping = false;
@@ -260,9 +260,9 @@ namespace CustomControls
             }
             this.bookingDatesGrid.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.bookingDatesGrid.Rows.Clear();
-            this.bookingDatesGrid.Rows.Add("From: " + booking.From.ToString("dd.MM.yyyy") + " " +
+            this.bookingDatesGrid.Rows.Add("من: " + booking.From.ToString("dd.MM.yyyy") + " " +
                                            booking.From.DayOfWeek.ToString().Substring(0, 3), (booking.To - booking.From).Days);
-            this.bookingDatesGrid.Rows.Add("To: " + booking.To.ToString("dd.MM.yyyy") + " " + booking.To.DayOfWeek.ToString().Substring(0, 3));
+            this.bookingDatesGrid.Rows.Add("الي: " + booking.To.ToString("dd.MM.yyyy") + " " + booking.To.DayOfWeek.ToString().Substring(0, 3));
             while (this.bookingDatesGrid.SelectedRows.Count > 0)
             {
                 this.bookingDatesGrid.SelectedRows.First().IsSelected = false;

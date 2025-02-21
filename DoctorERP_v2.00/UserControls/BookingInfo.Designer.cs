@@ -86,17 +86,18 @@
             // 
             this.bookingInfoLabel.AutoSize = false;
             this.bookingInfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookingInfoLabel.Location = new System.Drawing.Point(0, 0);
+            this.bookingInfoLabel.Location = new System.Drawing.Point(30, 0);
             this.bookingInfoLabel.Margin = new System.Windows.Forms.Padding(0);
             this.bookingInfoLabel.Name = "bookingInfoLabel";
             this.bookingInfoLabel.Size = new System.Drawing.Size(240, 50);
             this.bookingInfoLabel.TabIndex = 1;
-            this.bookingInfoLabel.Text = "bookingInfoLabel";
+            this.bookingInfoLabel.Text = "معلومات الحجز";
+            this.bookingInfoLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // closeButton
             // 
-            this.closeButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closeButton.Location = new System.Drawing.Point(240, 0);
+            this.closeButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.closeButton.Location = new System.Drawing.Point(0, 0);
             this.closeButton.Margin = new System.Windows.Forms.Padding(0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(30, 50);
@@ -115,18 +116,20 @@
             // bookingStatusLabel
             // 
             this.bookingStatusLabel.AutoSize = false;
-            this.bookingStatusLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bookingStatusLabel.Location = new System.Drawing.Point(0, 0);
+            this.bookingStatusLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bookingStatusLabel.Location = new System.Drawing.Point(210, 0);
             this.bookingStatusLabel.Name = "bookingStatusLabel";
             this.bookingStatusLabel.Size = new System.Drawing.Size(60, 40);
             this.bookingStatusLabel.TabIndex = 2;
-            this.bookingStatusLabel.Text = "Status:";
+            this.bookingStatusLabel.Text = "الحالة:";
+            this.bookingStatusLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // bookingStatusDropDown
             // 
             this.bookingStatusDropDown.AutoSize = false;
             this.bookingStatusDropDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookingStatusDropDown.Location = new System.Drawing.Point(60, 0);
+            this.bookingStatusDropDown.DropDownAnimationEnabled = true;
+            this.bookingStatusDropDown.Location = new System.Drawing.Point(0, 0);
             this.bookingStatusDropDown.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.bookingStatusDropDown.Name = "bookingStatusDropDown";
             this.bookingStatusDropDown.Size = new System.Drawing.Size(210, 40);
@@ -162,6 +165,7 @@
             this.bookingNameLabel.Name = "bookingNameLabel";
             this.bookingNameLabel.Size = new System.Drawing.Size(270, 70);
             this.bookingNameLabel.TabIndex = 1;
+            this.bookingNameLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // dropDownSeparator
             // 
@@ -169,7 +173,6 @@
             this.dropDownSeparator.Name = "dropDownSeparator";
             this.dropDownSeparator.Size = new System.Drawing.Size(180, 10);
             this.dropDownSeparator.TabIndex = 0;
-            this.dropDownSeparator.Text = "radSeparator1";
             // 
             // bookingRoomTypeIcon
             // 
@@ -179,6 +182,7 @@
             this.bookingRoomTypeIcon.Name = "bookingRoomTypeIcon";
             this.bookingRoomTypeIcon.Size = new System.Drawing.Size(70, 70);
             this.bookingRoomTypeIcon.TabIndex = 0;
+            this.bookingRoomTypeIcon.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // manageReservationContainer
             // 
@@ -193,12 +197,13 @@
             // manageStatusLabel
             // 
             this.manageStatusLabel.AutoSize = false;
-            this.manageStatusLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.manageStatusLabel.Location = new System.Drawing.Point(120, 0);
+            this.manageStatusLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.manageStatusLabel.Location = new System.Drawing.Point(0, 0);
             this.manageStatusLabel.Name = "manageStatusLabel";
             this.manageStatusLabel.Size = new System.Drawing.Size(150, 60);
             this.manageStatusLabel.TabIndex = 1;
             this.manageStatusLabel.Text = "Change reservation";
+            this.manageStatusLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.manageStatusLabel.Click += new System.EventHandler(this.manageStatusLabel_Click);
             // 
             // roomIdLabel
@@ -211,6 +216,7 @@
             this.roomIdLabel.Size = new System.Drawing.Size(270, 60);
             this.roomIdLabel.TabIndex = 0;
             this.roomIdLabel.Text = "radLabel1";
+            this.roomIdLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // bookingPriceLabel
             // 
@@ -223,6 +229,7 @@
             this.bookingPriceLabel.Size = new System.Drawing.Size(270, 59);
             this.bookingPriceLabel.TabIndex = 0;
             this.bookingPriceLabel.Text = "radLabel1";
+            this.bookingPriceLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // paymentSeparator
             // 
@@ -230,7 +237,6 @@
             this.paymentSeparator.Name = "paymentSeparator";
             this.paymentSeparator.Size = new System.Drawing.Size(250, 4);
             this.paymentSeparator.TabIndex = 0;
-            this.paymentSeparator.Text = "radSeparator1";
             // 
             // bookingDatesGrid
             // 
@@ -244,7 +250,6 @@
             this.bookingDatesGrid.Name = "bookingDatesGrid";
             this.bookingDatesGrid.Size = new System.Drawing.Size(270, 130);
             this.bookingDatesGrid.TabIndex = 8;
-            this.bookingDatesGrid.Text = "radGridView1";
             // 
             // BookingInfo
             // 
@@ -258,6 +263,7 @@
             this.Controls.Add(this.roomImageBox);
             this.Controls.Add(this.headerContainer);
             this.Name = "BookingInfo";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(270, 685);
             ((System.ComponentModel.ISupportInitialize)(this.headerContainer)).EndInit();
             this.headerContainer.ResumeLayout(false);

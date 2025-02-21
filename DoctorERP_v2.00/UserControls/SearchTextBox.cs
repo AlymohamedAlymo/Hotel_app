@@ -35,7 +35,7 @@ namespace CustomControls
         protected override void InitializeTextElement()
         {
             base.InitializeTextElement();
-            this.TextBoxElement.TextBoxItem.NullText = "Search by room# or guest name";
+            this.TextBoxElement.TextBoxItem.NullText = "البحث حسب رقم الغرفة أو اسم الضيف";
             searchButton.Click += new EventHandler(button_Click);
             searchButton.Margin = new Padding(0, 0, 0, 0);
             this.TextBoxElement.TextBoxItem.CustomFont =  Utils.MainFont;          

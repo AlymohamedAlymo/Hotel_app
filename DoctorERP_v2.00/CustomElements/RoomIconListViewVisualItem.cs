@@ -83,7 +83,7 @@ namespace HotelApp
             bookingInfo.CustomFontSize = 12;
             bookingInfo.CustomFontStyle = FontStyle.Regular;
 
-            needsRepair.Text = "repair";
+            needsRepair.Text = "اصلاحات";
             bookingDuration.NotifyParentOnMouseInput = true;
             bookingDuration.ShouldHandleMouseInput = false;
 
@@ -152,7 +152,7 @@ namespace HotelApp
             if (room != null)
             { 
                 HotelAppForm form = this.ElementTree.Control.FindForm() as HotelAppForm;
-                roomId.Text = "Room " + room.Id; 
+                roomId.Text = "غرفة " + room.Id; 
                 RoomStatus roomStatusAtDate = room.GetStatusByBooking(form.OverviewDate, form.Bookings);
                 roomStatus.Text = Utils.GetRoomStatus(roomStatusAtDate).ToLower();
                
@@ -178,9 +178,9 @@ namespace HotelApp
                 }
                 else
                 {
-                    bookingInfo.Text = "Free Room";
+                    bookingInfo.Text = "غرفة شاغرة";
                     bookingInfo.Image = Utils.GetAvailableImageByTheme();
-                    bookingDuration.Text = "0 days";
+                    bookingDuration.Text = "0 أيام";
                     this.BackColor = Utils.MainThemeColor;
                     roomId.ForeColor = Color.White;
                     roomStatus.ForeColor = Color.White;

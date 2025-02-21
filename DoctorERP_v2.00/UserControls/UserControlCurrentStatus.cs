@@ -29,7 +29,7 @@ namespace HotelApp
             this.trendsRangeSelector.ScaleInitializing += trendsRangeSelector_ScaleInitializing;
 
             this.occupiedPerDayChartView.ShowTitle = true;
-            this.occupiedPerDayChartView.Title = "OCCUPIED PER DAY";
+            this.occupiedPerDayChartView.Title = "مشغول يوميا";
             this.occupiedPerDayChartView.ChartElement.TitleElement.CustomFont = Utils.MainFontMedium;
             this.occupiedPerDayChartView.ChartElement.TitleElement.CustomFontSize = 10f;
             this.occupiedPerDayChartView.ChartElement.TitleElement.TextAlignment = ContentAlignment.MiddleCenter;

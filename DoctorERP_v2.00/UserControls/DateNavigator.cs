@@ -90,7 +90,7 @@ namespace CustomControls
             this.dateLabel.Text = this.navigatorDateTimePicker.Value.ToString("dd.MM.yyyy");
             if (this.navigatorDateTimePicker.Value == DateTime.Today)
             {
-                this.dateLabel.Text += " Today";
+                this.dateLabel.Text += " اليوم";
             }
         }
 

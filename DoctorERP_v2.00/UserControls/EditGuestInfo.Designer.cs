@@ -36,9 +36,11 @@
             this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
             this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
             this.validDateTimePicker = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.validSeparator = new Telerik.WinControls.UI.RadSeparator();
             this.validLabel = new Telerik.WinControls.UI.RadLabel();
             this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
             this.ccvTextBox = new Telerik.WinControls.UI.RadTextBox();
+            this.ccvSeparator = new Telerik.WinControls.UI.RadSeparator();
             this.ccvLabel = new Telerik.WinControls.UI.RadLabel();
             this.creditCardNumberTexBox = new Telerik.WinControls.UI.RadTextBox();
             this.creditCardSeparator = new Telerik.WinControls.UI.RadSeparator();
@@ -58,8 +60,6 @@
             this.nameTextBox = new Telerik.WinControls.UI.RadTextBox();
             this.nameSeparator = new Telerik.WinControls.UI.RadSeparator();
             this.nameLabel = new Telerik.WinControls.UI.RadLabel();
-            this.validSeparator = new Telerik.WinControls.UI.RadSeparator();
-            this.ccvSeparator = new Telerik.WinControls.UI.RadSeparator();
             this.errorLabel = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.headerPanel)).BeginInit();
             this.headerPanel.SuspendLayout();
@@ -74,11 +74,13 @@
             this.splitPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validDateTimePicker)).BeginInit();
             this.validDateTimePicker.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.validSeparator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).BeginInit();
             this.splitPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ccvTextBox)).BeginInit();
             this.ccvTextBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ccvSeparator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccvLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.creditCardNumberTexBox)).BeginInit();
             this.creditCardNumberTexBox.SuspendLayout();
@@ -104,8 +106,6 @@
             this.nameTextBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nameSeparator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameLabel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validSeparator)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ccvSeparator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorLabel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,17 +123,18 @@
             // 
             this.guestInfoLabel.AutoSize = false;
             this.guestInfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guestInfoLabel.Location = new System.Drawing.Point(0, 0);
+            this.guestInfoLabel.Location = new System.Drawing.Point(30, 0);
             this.guestInfoLabel.Margin = new System.Windows.Forms.Padding(0);
             this.guestInfoLabel.Name = "guestInfoLabel";
             this.guestInfoLabel.Size = new System.Drawing.Size(240, 40);
             this.guestInfoLabel.TabIndex = 2;
-            this.guestInfoLabel.Text = "EDIT GUEST INFORMATION";
+            this.guestInfoLabel.Text = "تعديل معلومات الضيف";
+            this.guestInfoLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // closeButton
             // 
-            this.closeButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closeButton.Location = new System.Drawing.Point(240, 0);
+            this.closeButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.closeButton.Location = new System.Drawing.Point(0, 0);
             this.closeButton.Margin = new System.Windows.Forms.Padding(0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(30, 40);
@@ -146,7 +147,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 24);
             this.saveButton.TabIndex = 2;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = "حفظ";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // editPanel
@@ -185,7 +186,6 @@
             this.radSplitContainer1.SplitterWidth = 0;
             this.radSplitContainer1.TabIndex = 12;
             this.radSplitContainer1.TabStop = false;
-            this.radSplitContainer1.Text = "radSplitContainer1";
             // 
             // splitPanel1
             // 
@@ -205,6 +205,7 @@
             // validDateTimePicker
             // 
             this.validDateTimePicker.AutoSize = false;
+            this.validDateTimePicker.CalendarSize = new System.Drawing.Size(290, 320);
             this.validDateTimePicker.Controls.Add(this.validSeparator);
             this.validDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.validDateTimePicker.Location = new System.Drawing.Point(0, 40);
@@ -215,6 +216,13 @@
             this.validDateTimePicker.Text = "Wednesday, June 28, 2017";
             this.validDateTimePicker.Value = new System.DateTime(2017, 6, 28, 17, 1, 8, 555);
             // 
+            // validSeparator
+            // 
+            this.validSeparator.Location = new System.Drawing.Point(3, 33);
+            this.validSeparator.Name = "validSeparator";
+            this.validSeparator.Size = new System.Drawing.Size(110, 4);
+            this.validSeparator.TabIndex = 4;
+            // 
             // validLabel
             // 
             this.validLabel.AutoSize = false;
@@ -224,6 +232,7 @@
             this.validLabel.Size = new System.Drawing.Size(135, 40);
             this.validLabel.TabIndex = 0;
             this.validLabel.Text = "Valid";
+            this.validLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // splitPanel2
             // 
@@ -250,6 +259,13 @@
             this.ccvTextBox.Size = new System.Drawing.Size(135, 40);
             this.ccvTextBox.TabIndex = 1;
             // 
+            // ccvSeparator
+            // 
+            this.ccvSeparator.Location = new System.Drawing.Point(6, 33);
+            this.ccvSeparator.Name = "ccvSeparator";
+            this.ccvSeparator.Size = new System.Drawing.Size(110, 4);
+            this.ccvSeparator.TabIndex = 5;
+            // 
             // ccvLabel
             // 
             this.ccvLabel.AutoSize = false;
@@ -259,6 +275,7 @@
             this.ccvLabel.Size = new System.Drawing.Size(135, 40);
             this.ccvLabel.TabIndex = 0;
             this.ccvLabel.Text = "CCV";
+            this.ccvLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // creditCardNumberTexBox
             // 
@@ -276,7 +293,6 @@
             this.creditCardSeparator.Name = "creditCardSeparator";
             this.creditCardSeparator.Size = new System.Drawing.Size(230, 4);
             this.creditCardSeparator.TabIndex = 3;
-            this.creditCardSeparator.Text = "radSeparator1";
             // 
             // creditCardNumberLabel
             // 
@@ -286,7 +302,8 @@
             this.creditCardNumberLabel.Name = "creditCardNumberLabel";
             this.creditCardNumberLabel.Size = new System.Drawing.Size(270, 40);
             this.creditCardNumberLabel.TabIndex = 10;
-            this.creditCardNumberLabel.Text = "Credit card #";
+            this.creditCardNumberLabel.Text = "بطاقة إئتمان #";
+            this.creditCardNumberLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // phoneTextBox
             // 
@@ -304,7 +321,6 @@
             this.phoneSeparator.Name = "phoneSeparator";
             this.phoneSeparator.Size = new System.Drawing.Size(230, 4);
             this.phoneSeparator.TabIndex = 3;
-            this.phoneSeparator.Text = "radSeparator1";
             // 
             // phoneLabel
             // 
@@ -314,7 +330,8 @@
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(270, 40);
             this.phoneLabel.TabIndex = 8;
-            this.phoneLabel.Text = "Phone:";
+            this.phoneLabel.Text = "الهاتف:";
+            this.phoneLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // cityTextBox
             // 
@@ -332,7 +349,6 @@
             this.citySeparator.Name = "citySeparator";
             this.citySeparator.Size = new System.Drawing.Size(230, 4);
             this.citySeparator.TabIndex = 3;
-            this.citySeparator.Text = "radSeparator1";
             // 
             // cityLabel
             // 
@@ -342,7 +358,8 @@
             this.cityLabel.Name = "cityLabel";
             this.cityLabel.Size = new System.Drawing.Size(270, 40);
             this.cityLabel.TabIndex = 6;
-            this.cityLabel.Text = "City:";
+            this.cityLabel.Text = "المدينة:";
+            this.cityLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // addressTextBox
             // 
@@ -360,7 +377,6 @@
             this.addressSeparator.Name = "addressSeparator";
             this.addressSeparator.Size = new System.Drawing.Size(230, 4);
             this.addressSeparator.TabIndex = 2;
-            this.addressSeparator.Text = "radSeparator1";
             // 
             // addressLabel
             // 
@@ -370,7 +386,8 @@
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(270, 40);
             this.addressLabel.TabIndex = 4;
-            this.addressLabel.Text = "Address:";
+            this.addressLabel.Text = "العنوان:";
+            this.addressLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // idTextBox
             // 
@@ -388,7 +405,6 @@
             this.idSeparator.Name = "idSeparator";
             this.idSeparator.Size = new System.Drawing.Size(230, 4);
             this.idSeparator.TabIndex = 2;
-            this.idSeparator.Text = "radSeparator1";
             // 
             // idLabel
             // 
@@ -398,7 +414,8 @@
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(270, 40);
             this.idLabel.TabIndex = 2;
-            this.idLabel.Text = "ID:";
+            this.idLabel.Text = "بطاقة تعريف:";
+            this.idLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // nameTextBox
             // 
@@ -416,7 +433,6 @@
             this.nameSeparator.Name = "nameSeparator";
             this.nameSeparator.Size = new System.Drawing.Size(230, 4);
             this.nameSeparator.TabIndex = 1;
-            this.nameSeparator.Text = "radSeparator1";
             // 
             // nameLabel
             // 
@@ -426,23 +442,8 @@
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(270, 40);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Name:";
-            // 
-            // validSeparator
-            // 
-            this.validSeparator.Location = new System.Drawing.Point(3, 33);
-            this.validSeparator.Name = "validSeparator";
-            this.validSeparator.Size = new System.Drawing.Size(110, 4);
-            this.validSeparator.TabIndex = 4;
-            this.validSeparator.Text = "radSeparator1";
-            // 
-            // ccvSeparator
-            // 
-            this.ccvSeparator.Location = new System.Drawing.Point(6, 33);
-            this.ccvSeparator.Name = "ccvSeparator";
-            this.ccvSeparator.Size = new System.Drawing.Size(110, 4);
-            this.ccvSeparator.TabIndex = 5;
-            this.ccvSeparator.Text = "radSeparator2";
+            this.nameLabel.Text = "الاسم:";
+            this.nameLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // errorLabel
             // 
@@ -451,6 +452,7 @@
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(132, 57);
             this.errorLabel.TabIndex = 6;
+            this.errorLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // EditGuestInfo
             // 
@@ -461,6 +463,7 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.headerPanel);
             this.Name = "EditGuestInfo";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(270, 670);
             ((System.ComponentModel.ISupportInitialize)(this.headerPanel)).EndInit();
             this.headerPanel.ResumeLayout(false);
@@ -476,12 +479,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.validDateTimePicker)).EndInit();
             this.validDateTimePicker.ResumeLayout(false);
             this.validDateTimePicker.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.validSeparator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).EndInit();
             this.splitPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ccvTextBox)).EndInit();
             this.ccvTextBox.ResumeLayout(false);
             this.ccvTextBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ccvSeparator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccvLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.creditCardNumberTexBox)).EndInit();
             this.creditCardNumberTexBox.ResumeLayout(false);
@@ -513,8 +518,6 @@
             this.nameTextBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nameSeparator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameLabel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validSeparator)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ccvSeparator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorLabel)).EndInit();
             this.ResumeLayout(false);
 

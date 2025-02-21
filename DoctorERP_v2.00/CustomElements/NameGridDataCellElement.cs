@@ -57,18 +57,18 @@ namespace HotelApp
                 durationElement.Text = (booking.To - booking.From).Days.ToString();
                 if (durationElement.Text == "1")
                 {
-                    durationElement.Text = "1 day";
+                    durationElement.Text = "1 يوم";
                 }
                 else
                 {
-                    durationElement.Text += " days";
+                    durationElement.Text += " أيام";
                 }
             }
         }
             
         public override bool IsCompatible(GridViewColumn data, object context)
         {
-            return data.Name == "Name" && context is GridViewDataRowInfo;
+            return data.Name == "اسم" && context is GridViewDataRowInfo;
         }
     }
     

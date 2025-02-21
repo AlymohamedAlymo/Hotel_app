@@ -342,10 +342,10 @@ namespace HotelApp
             this.form = this.FindForm() as HotelAppForm;
             this.roomDetailsSearchDropDown.Inialize(form.Rooms, form.Bookings);
             this.comingFrom = comingFrom;
-            this.roomIdLabel.Text = "Room # " + room.Id;
+            this.roomIdLabel.Text = "غرفة # " + room.Id;
             this.typeLabel.Text = room.Type.ToString();
             this.typeLabel.Image = Utils.GetImageByRoomType(room.Type);
-            this.statusLabel.Text = "Status now: " + room.Status.ToString();
+            this.statusLabel.Text = "الحالة الان: " + room.Status.ToString();
             this.roomIconLabel.Image = this.typeLabel.Image;
             this.roomIconLabel.LabelElement.LabelImage.Margin = new Padding(40, 0, 0, 0);
             this.statusDropDown.SelectedValue = room.HouseKeepingStatus;
@@ -353,10 +353,10 @@ namespace HotelApp
             this.needsRepairsCheckBox.Checked = room.NeedsRepairs;
             if (form != null)
             {
-                appointmentMappingInfo.End = "To";
-                appointmentMappingInfo.Start = "From";
-                appointmentMappingInfo.Summary = "Name";
-                appointmentMappingInfo.BackgroundId = "Status";
+                appointmentMappingInfo.End = "من";
+                appointmentMappingInfo.Start = "الي";
+                appointmentMappingInfo.Summary = "الاسم";
+                appointmentMappingInfo.BackgroundId = "الحالة";
                 schedulerBindingDataSource1.EventProvider.Mapping = appointmentMappingInfo;
                 schedulerBindingDataSource1.EventProvider.DataSource = form.Bookings; 
 
@@ -369,19 +369,19 @@ namespace HotelApp
 
                 this.roomsScheduler.Backgrounds.Clear();
 
-                AppointmentBackgroundInfo reservationBackgroundInfo = new AppointmentBackgroundInfo(1, "Reservation", Color.Yellow, Color.Yellow);
+                AppointmentBackgroundInfo reservationBackgroundInfo = new AppointmentBackgroundInfo(1, "حجز", Color.Yellow, Color.Yellow);
                 reservationBackgroundInfo.ShadowWidth = 0;
                 this.roomsScheduler.Backgrounds.Add(reservationBackgroundInfo);
-                AppointmentBackgroundInfo actualBackgroundInfo = new AppointmentBackgroundInfo(2, "Actual", Color.Green, Color.Green);
+                AppointmentBackgroundInfo actualBackgroundInfo = new AppointmentBackgroundInfo(2, "فِعلي", Color.Green, Color.Green);
                 actualBackgroundInfo.ShadowWidth = 0;
                 this.roomsScheduler.Backgrounds.Add(actualBackgroundInfo);
-                AppointmentBackgroundInfo cancelledBackgroundInfo = new AppointmentBackgroundInfo(3, "Cancelled", Color.OrangeRed, Color.OrangeRed);
+                AppointmentBackgroundInfo cancelledBackgroundInfo = new AppointmentBackgroundInfo(3, "تم الإلغاء", Color.OrangeRed, Color.OrangeRed);
                 cancelledBackgroundInfo.ShadowWidth = 0;
                 this.roomsScheduler.Backgrounds.Add(cancelledBackgroundInfo);
-                AppointmentBackgroundInfo checkedOutBackgroundInfo = new AppointmentBackgroundInfo(4, "CheckedOut", Color.Orange, Color.Orange);
+                AppointmentBackgroundInfo checkedOutBackgroundInfo = new AppointmentBackgroundInfo(4, "تم الخروج", Color.Orange, Color.Orange);
                 checkedOutBackgroundInfo.ShadowWidth = 0;
                 this.roomsScheduler.Backgrounds.Add(checkedOutBackgroundInfo);
-                AppointmentBackgroundInfo noShowBackgroundInfo = new AppointmentBackgroundInfo(5, "NoShow", Utils.MainThemeColor, Utils.MainThemeColor);
+                AppointmentBackgroundInfo noShowBackgroundInfo = new AppointmentBackgroundInfo(5, "لا يوجد عرض", Utils.MainThemeColor, Utils.MainThemeColor);
                 noShowBackgroundInfo.ShadowWidth = 0;
                 this.roomsScheduler.Backgrounds.Add(noShowBackgroundInfo);
             }
