@@ -38,40 +38,30 @@ namespace HotelApp
             this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             this.mainContainer = new Telerik.WinControls.UI.RadPageView();
             this.OverviewPage = new Telerik.WinControls.UI.RadPageViewPage();
+            this.navigationPanelOverview = new Telerik.WinControls.UI.RadPanel();
+            this.searchContainerOverview = new Telerik.WinControls.UI.RadPanel();
+            this.radPanelEmptyOverview = new Telerik.WinControls.UI.RadPanel();
             this.overviewMainContainer = new Telerik.WinControls.UI.RadPanel();
             this.overviewRoomsView = new Telerik.WinControls.UI.RadListView();
             this.overviewLeftView = new Telerik.WinControls.UI.RadListView();
-            this.navigationPanelOverview = new Telerik.WinControls.UI.RadPanel();
-            this.searchContainerOverview = new Telerik.WinControls.UI.RadPanel();
-            this.searchTextBoxOverview = new CustomControls.SearchTextBox();
-            this.radPanelEmptyOverview = new Telerik.WinControls.UI.RadPanel();
-            this.dateNavigatorOverview = new CustomControls.DateNavigator();
             this.BookingsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.bookingsMainContainer = new Telerik.WinControls.UI.RadPanel();
             this.bookingsGrid = new Telerik.WinControls.UI.RadGridView();
             this.labelBookings = new Telerik.WinControls.UI.RadLabel();
             this.bookingInfoRightPanel = new Telerik.WinControls.UI.RadPanel();
-            this.editGuestInfo = new CustomControls.EditGuestInfo();
-            this.bookingInfoUC = new CustomControls.BookingInfo();
             this.bookingsLeftView = new Telerik.WinControls.UI.RadListView();
             this.navigationPanelBookings = new Telerik.WinControls.UI.RadPanel();
             this.searchContainerBookings = new Telerik.WinControls.UI.RadPanel();
-            this.searchTextBoxBookings = new CustomControls.SearchTextBox();
             this.radPanelEmptyBooking = new Telerik.WinControls.UI.RadPanel();
-            this.dateNavigatorBookings = new CustomControls.DateNavigator();
             this.SchedulePage = new Telerik.WinControls.UI.RadPageViewPage();
             this.scheduleBookingPanel = new Telerik.WinControls.UI.RadPanel();
-            this.scheduleBookingInfo = new CustomControls.BookingInfo();
-            this.scheduleEditGuestInfo = new CustomControls.EditGuestInfo();
-            this.ScheduleRadScheduler = new Telerik.WinControls.UI.RadScheduler();
-            this.scheduleRadSchedulerHeader = new Telerik.WinControls.UI.RadPanel();
             this.scheduleHeaderPanel = new Telerik.WinControls.UI.RadPanel();
             this.scheduleSearchPanel = new Telerik.WinControls.UI.RadPanel();
-            this.scheduleSearchDropDown = new HotelApp.SearchDropDownList();
             this.scheduleWeeklyButton = new Telerik.WinControls.UI.RadToggleButton();
             this.scheduleMonthlyButton = new Telerik.WinControls.UI.RadToggleButton();
             this.scheduleDaysButton = new Telerik.WinControls.UI.RadToggleButton();
-            this.scheduleDateNavigator = new CustomControls.DateNavigator();
+            this.ScheduleRadScheduler = new Telerik.WinControls.UI.RadScheduler();
+            this.scheduleRadSchedulerHeader = new Telerik.WinControls.UI.RadPanel();
             this.scheduleListView = new Telerik.WinControls.UI.RadListView();
             this.HouseKeepingPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.houseKeepingSplitContainer = new Telerik.WinControls.UI.RadSplitContainer();
@@ -85,36 +75,45 @@ namespace HotelApp
             this.houseKeepingWeeklyToggleButton = new Telerik.WinControls.UI.RadToggleButton();
             this.houseKeepingMonthlyToggleButton = new Telerik.WinControls.UI.RadToggleButton();
             this.houseKeepingDaysToggleButton = new Telerik.WinControls.UI.RadToggleButton();
-            this.houseKeepingDateNavigator = new CustomControls.DateNavigator();
             this.houseKeepingListView = new Telerik.WinControls.UI.RadListView();
             this.ReportsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.reportsTypePanel = new Telerik.WinControls.UI.RadPanel();
-            this.userControlBookingsByType1 = new HotelApp.UserControlBookingsByType();
             this.reportsBookingsByTypeLabel = new Telerik.WinControls.UI.RadLabel();
             this.reportsStatusPanel = new Telerik.WinControls.UI.RadPanel();
-            this.userControlCurrentStatus1 = new HotelApp.UserControlCurrentStatus();
             this.reportsCurrentStatusLabel = new Telerik.WinControls.UI.RadLabel();
             this.reportsHeaderPanel = new Telerik.WinControls.UI.RadPanel();
             this.reportsWeeklyToggleButton = new Telerik.WinControls.UI.RadToggleButton();
             this.reportsMonthlyToggleButton = new Telerik.WinControls.UI.RadToggleButton();
             this.reportsDaysToggleButton = new Telerik.WinControls.UI.RadToggleButton();
-            this.reportsDateNavigator = new CustomControls.DateNavigator();
             this.materialTealTheme1 = new Telerik.WinControls.Themes.MaterialTealTheme();
             this.materialPinkTheme1 = new Telerik.WinControls.Themes.MaterialPinkTheme();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
+            this.searchTextBoxOverview = new CustomControls.SearchTextBox();
+            this.dateNavigatorOverview = new CustomControls.DateNavigator();
+            this.editGuestInfo = new CustomControls.EditGuestInfo();
+            this.bookingInfoUC = new CustomControls.BookingInfo();
+            this.searchTextBoxBookings = new CustomControls.SearchTextBox();
+            this.dateNavigatorBookings = new CustomControls.DateNavigator();
+            this.scheduleBookingInfo = new CustomControls.BookingInfo();
+            this.scheduleEditGuestInfo = new CustomControls.EditGuestInfo();
+            this.scheduleSearchDropDown = new HotelApp.SearchDropDownList();
+            this.scheduleDateNavigator = new CustomControls.DateNavigator();
+            this.houseKeepingDateNavigator = new CustomControls.DateNavigator();
+            this.userControlBookingsByType1 = new HotelApp.UserControlBookingsByType();
+            this.userControlCurrentStatus1 = new HotelApp.UserControlCurrentStatus();
+            this.reportsDateNavigator = new CustomControls.DateNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.mainContainer)).BeginInit();
             this.mainContainer.SuspendLayout();
             this.OverviewPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewMainContainer)).BeginInit();
-            this.overviewMainContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewRoomsView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewLeftView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPanelOverview)).BeginInit();
             this.navigationPanelOverview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchContainerOverview)).BeginInit();
             this.searchContainerOverview.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxOverview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelEmptyOverview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewMainContainer)).BeginInit();
+            this.overviewMainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewRoomsView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewLeftView)).BeginInit();
             this.BookingsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsMainContainer)).BeginInit();
             this.bookingsMainContainer.SuspendLayout();
@@ -128,21 +127,19 @@ namespace HotelApp
             this.navigationPanelBookings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchContainerBookings)).BeginInit();
             this.searchContainerBookings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxBookings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelEmptyBooking)).BeginInit();
             this.SchedulePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBookingPanel)).BeginInit();
             this.scheduleBookingPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ScheduleRadScheduler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleRadSchedulerHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleHeaderPanel)).BeginInit();
             this.scheduleHeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleSearchPanel)).BeginInit();
             this.scheduleSearchPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleSearchDropDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleWeeklyButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleMonthlyButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleDaysButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScheduleRadScheduler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleRadSchedulerHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleListView)).BeginInit();
             this.HouseKeepingPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.houseKeepingSplitContainer)).BeginInit();
@@ -174,6 +171,9 @@ namespace HotelApp
             ((System.ComponentModel.ISupportInitialize)(this.reportsWeeklyToggleButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsMonthlyToggleButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsDaysToggleButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxOverview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxBookings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleSearchDropDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,7 +187,7 @@ namespace HotelApp
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainContainer.Location = new System.Drawing.Point(0, 0);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.SelectedPage = this.BookingsPage;
+            this.mainContainer.SelectedPage = this.OverviewPage;
             this.mainContainer.Size = new System.Drawing.Size(1292, 697);
             this.mainContainer.TabIndex = 0;
             // 
@@ -195,11 +195,41 @@ namespace HotelApp
             // 
             this.OverviewPage.Controls.Add(this.overviewMainContainer);
             this.OverviewPage.Controls.Add(this.navigationPanelOverview);
-            this.OverviewPage.ItemSize = new System.Drawing.SizeF(74F, 29F);
+            this.OverviewPage.ItemSize = new System.Drawing.SizeF(53F, 25F);
             this.OverviewPage.Location = new System.Drawing.Point(6, 36);
             this.OverviewPage.Name = "OverviewPage";
             this.OverviewPage.Size = new System.Drawing.Size(1280, 655);
-            this.OverviewPage.Text = "OVERVIEW";
+            this.OverviewPage.Text = "الرئيسية";
+            // 
+            // navigationPanelOverview
+            // 
+            this.navigationPanelOverview.Controls.Add(this.searchContainerOverview);
+            this.navigationPanelOverview.Controls.Add(this.dateNavigatorOverview);
+            this.navigationPanelOverview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationPanelOverview.Location = new System.Drawing.Point(0, 0);
+            this.navigationPanelOverview.Margin = new System.Windows.Forms.Padding(0);
+            this.navigationPanelOverview.Name = "navigationPanelOverview";
+            this.navigationPanelOverview.Size = new System.Drawing.Size(1280, 60);
+            this.navigationPanelOverview.TabIndex = 0;
+            // 
+            // searchContainerOverview
+            // 
+            this.searchContainerOverview.Controls.Add(this.radPanelEmptyOverview);
+            this.searchContainerOverview.Controls.Add(this.searchTextBoxOverview);
+            this.searchContainerOverview.Dock = System.Windows.Forms.DockStyle.Left;
+            this.searchContainerOverview.Location = new System.Drawing.Point(0, 0);
+            this.searchContainerOverview.Name = "searchContainerOverview";
+            this.searchContainerOverview.Size = new System.Drawing.Size(632, 60);
+            this.searchContainerOverview.TabIndex = 1;
+            // 
+            // radPanelEmptyOverview
+            // 
+            this.radPanelEmptyOverview.BackColor = System.Drawing.Color.Transparent;
+            this.radPanelEmptyOverview.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radPanelEmptyOverview.Location = new System.Drawing.Point(592, 0);
+            this.radPanelEmptyOverview.Name = "radPanelEmptyOverview";
+            this.radPanelEmptyOverview.Size = new System.Drawing.Size(40, 60);
+            this.radPanelEmptyOverview.TabIndex = 1;
             // 
             // overviewMainContainer
             // 
@@ -235,68 +265,15 @@ namespace HotelApp
             this.overviewLeftView.Size = new System.Drawing.Size(269, 595);
             this.overviewLeftView.TabIndex = 1;
             // 
-            // navigationPanelOverview
-            // 
-            this.navigationPanelOverview.Controls.Add(this.searchContainerOverview);
-            this.navigationPanelOverview.Controls.Add(this.dateNavigatorOverview);
-            this.navigationPanelOverview.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationPanelOverview.Location = new System.Drawing.Point(0, 0);
-            this.navigationPanelOverview.Margin = new System.Windows.Forms.Padding(0);
-            this.navigationPanelOverview.Name = "navigationPanelOverview";
-            this.navigationPanelOverview.Size = new System.Drawing.Size(1280, 60);
-            this.navigationPanelOverview.TabIndex = 0;
-            // 
-            // searchContainerOverview
-            // 
-            this.searchContainerOverview.Controls.Add(this.searchTextBoxOverview);
-            this.searchContainerOverview.Controls.Add(this.radPanelEmptyOverview);
-            this.searchContainerOverview.Dock = System.Windows.Forms.DockStyle.Right;
-            this.searchContainerOverview.Location = new System.Drawing.Point(648, 0);
-            this.searchContainerOverview.Name = "searchContainerOverview";
-            this.searchContainerOverview.Size = new System.Drawing.Size(632, 60);
-            this.searchContainerOverview.TabIndex = 1;
-            // 
-            // searchTextBoxOverview
-            // 
-            this.searchTextBoxOverview.AutoSize = false;
-            this.searchTextBoxOverview.Location = new System.Drawing.Point(3, 10);
-            this.searchTextBoxOverview.Name = "searchTextBoxOverview";
-            this.searchTextBoxOverview.NullText = "Search by room# or guest name";
-            // 
-            // 
-            // 
-            this.searchTextBoxOverview.RootElement.CustomFont = "Roboto";
-            this.searchTextBoxOverview.RootElement.CustomFontSize = 8F;
-            this.searchTextBoxOverview.Size = new System.Drawing.Size(590, 29);
-            this.searchTextBoxOverview.TabIndex = 0;
-            // 
-            // radPanelEmptyOverview
-            // 
-            this.radPanelEmptyOverview.BackColor = System.Drawing.Color.Transparent;
-            this.radPanelEmptyOverview.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radPanelEmptyOverview.Location = new System.Drawing.Point(592, 0);
-            this.radPanelEmptyOverview.Name = "radPanelEmptyOverview";
-            this.radPanelEmptyOverview.Size = new System.Drawing.Size(40, 60);
-            this.radPanelEmptyOverview.TabIndex = 1;
-            // 
-            // dateNavigatorOverview
-            // 
-            this.dateNavigatorOverview.BackColor = System.Drawing.Color.Transparent;
-            this.dateNavigatorOverview.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dateNavigatorOverview.Location = new System.Drawing.Point(0, 0);
-            this.dateNavigatorOverview.Name = "dateNavigatorOverview";
-            this.dateNavigatorOverview.Size = new System.Drawing.Size(270, 60);
-            this.dateNavigatorOverview.TabIndex = 0;
-            // 
             // BookingsPage
             // 
             this.BookingsPage.Controls.Add(this.bookingsMainContainer);
             this.BookingsPage.Controls.Add(this.navigationPanelBookings);
-            this.BookingsPage.ItemSize = new System.Drawing.SizeF(75F, 29F);
+            this.BookingsPage.ItemSize = new System.Drawing.SizeF(59F, 25F);
             this.BookingsPage.Location = new System.Drawing.Point(6, 36);
             this.BookingsPage.Name = "BookingsPage";
             this.BookingsPage.Size = new System.Drawing.Size(1280, 655);
-            this.BookingsPage.Text = "BOOKINGS";
+            this.BookingsPage.Text = "الحجوزات";
             // 
             // bookingsMainContainer
             // 
@@ -333,7 +310,7 @@ namespace HotelApp
             this.labelBookings.Size = new System.Drawing.Size(741, 50);
             this.labelBookings.TabIndex = 4;
             this.labelBookings.Text = "Occupied by";
-            this.labelBookings.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelBookings.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // bookingInfoRightPanel
             // 
@@ -344,24 +321,6 @@ namespace HotelApp
             this.bookingInfoRightPanel.Name = "bookingInfoRightPanel";
             this.bookingInfoRightPanel.Size = new System.Drawing.Size(270, 595);
             this.bookingInfoRightPanel.TabIndex = 1;
-            // 
-            // editGuestInfo
-            // 
-            this.editGuestInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.editGuestInfo.Location = new System.Drawing.Point(0, 0);
-            this.editGuestInfo.Name = "editGuestInfo";
-            this.editGuestInfo.Size = new System.Drawing.Size(270, 595);
-            this.editGuestInfo.TabIndex = 1;
-            // 
-            // bookingInfoUC
-            // 
-            this.bookingInfoUC.Booking = null;
-            this.bookingInfoUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookingInfoUC.Location = new System.Drawing.Point(0, 0);
-            this.bookingInfoUC.Name = "bookingInfoUC";
-            this.bookingInfoUC.Room = null;
-            this.bookingInfoUC.Size = new System.Drawing.Size(270, 595);
-            this.bookingInfoUC.TabIndex = 0;
             // 
             // bookingsLeftView
             // 
@@ -393,20 +352,6 @@ namespace HotelApp
             this.searchContainerBookings.Size = new System.Drawing.Size(632, 60);
             this.searchContainerBookings.TabIndex = 1;
             // 
-            // searchTextBoxBookings
-            // 
-            this.searchTextBoxBookings.AutoSize = false;
-            this.searchTextBoxBookings.Location = new System.Drawing.Point(3, 10);
-            this.searchTextBoxBookings.Name = "searchTextBoxBookings";
-            this.searchTextBoxBookings.NullText = "Search by room# or guest name";
-            // 
-            // 
-            // 
-            this.searchTextBoxBookings.RootElement.CustomFont = "Roboto";
-            this.searchTextBoxBookings.RootElement.CustomFontSize = 8F;
-            this.searchTextBoxBookings.Size = new System.Drawing.Size(590, 29);
-            this.searchTextBoxBookings.TabIndex = 0;
-            // 
             // radPanelEmptyBooking
             // 
             this.radPanelEmptyBooking.Dock = System.Windows.Forms.DockStyle.Right;
@@ -415,27 +360,18 @@ namespace HotelApp
             this.radPanelEmptyBooking.Size = new System.Drawing.Size(40, 60);
             this.radPanelEmptyBooking.TabIndex = 1;
             // 
-            // dateNavigatorBookings
-            // 
-            this.dateNavigatorBookings.BackColor = System.Drawing.Color.Transparent;
-            this.dateNavigatorBookings.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dateNavigatorBookings.Location = new System.Drawing.Point(0, 0);
-            this.dateNavigatorBookings.Name = "dateNavigatorBookings";
-            this.dateNavigatorBookings.Size = new System.Drawing.Size(270, 60);
-            this.dateNavigatorBookings.TabIndex = 0;
-            // 
             // SchedulePage
             // 
             this.SchedulePage.Controls.Add(this.scheduleBookingPanel);
+            this.SchedulePage.Controls.Add(this.scheduleHeaderPanel);
             this.SchedulePage.Controls.Add(this.ScheduleRadScheduler);
             this.SchedulePage.Controls.Add(this.scheduleRadSchedulerHeader);
-            this.SchedulePage.Controls.Add(this.scheduleHeaderPanel);
             this.SchedulePage.Controls.Add(this.scheduleListView);
-            this.SchedulePage.ItemSize = new System.Drawing.SizeF(73F, 29F);
+            this.SchedulePage.ItemSize = new System.Drawing.SizeF(48F, 25F);
             this.SchedulePage.Location = new System.Drawing.Point(10, 37);
             this.SchedulePage.Name = "SchedulePage";
             this.SchedulePage.Size = new System.Drawing.Size(1331, 649);
-            this.SchedulePage.Text = "SCHEDULE";
+            this.SchedulePage.Text = "الجدول";
             // 
             // scheduleBookingPanel
             // 
@@ -447,47 +383,6 @@ namespace HotelApp
             this.scheduleBookingPanel.Size = new System.Drawing.Size(270, 529);
             this.scheduleBookingPanel.TabIndex = 2;
             // 
-            // scheduleBookingInfo
-            // 
-            this.scheduleBookingInfo.Booking = null;
-            this.scheduleBookingInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scheduleBookingInfo.Location = new System.Drawing.Point(0, 0);
-            this.scheduleBookingInfo.Name = "scheduleBookingInfo";
-            this.scheduleBookingInfo.Room = null;
-            this.scheduleBookingInfo.Size = new System.Drawing.Size(270, 529);
-            this.scheduleBookingInfo.TabIndex = 0;
-            // 
-            // scheduleEditGuestInfo
-            // 
-            this.scheduleEditGuestInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scheduleEditGuestInfo.Location = new System.Drawing.Point(0, 0);
-            this.scheduleEditGuestInfo.Name = "scheduleEditGuestInfo";
-            this.scheduleEditGuestInfo.Size = new System.Drawing.Size(270, 529);
-            this.scheduleEditGuestInfo.TabIndex = 0;
-            // 
-            // ScheduleRadScheduler
-            // 
-            this.ScheduleRadScheduler.Culture = new System.Globalization.CultureInfo("en-US");
-            this.ScheduleRadScheduler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ScheduleRadScheduler.Location = new System.Drawing.Point(269, 120);
-            this.ScheduleRadScheduler.Name = "ScheduleRadScheduler";
-            schedulerDailyPrintStyle1.AppointmentFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            schedulerDailyPrintStyle1.DateEndRange = new System.DateTime(2017, 7, 23, 0, 0, 0, 0);
-            schedulerDailyPrintStyle1.DateHeadingFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            schedulerDailyPrintStyle1.DateStartRange = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
-            schedulerDailyPrintStyle1.PageHeadingFont = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
-            this.ScheduleRadScheduler.PrintStyle = schedulerDailyPrintStyle1;
-            this.ScheduleRadScheduler.Size = new System.Drawing.Size(1062, 529);
-            this.ScheduleRadScheduler.TabIndex = 4;
-            // 
-            // scheduleRadSchedulerHeader
-            // 
-            this.scheduleRadSchedulerHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scheduleRadSchedulerHeader.Location = new System.Drawing.Point(269, 60);
-            this.scheduleRadSchedulerHeader.Name = "scheduleRadSchedulerHeader";
-            this.scheduleRadSchedulerHeader.Size = new System.Drawing.Size(1062, 60);
-            this.scheduleRadSchedulerHeader.TabIndex = 3;
-            // 
             // scheduleHeaderPanel
             // 
             this.scheduleHeaderPanel.Controls.Add(this.scheduleSearchPanel);
@@ -496,7 +391,7 @@ namespace HotelApp
             this.scheduleHeaderPanel.Controls.Add(this.scheduleDaysButton);
             this.scheduleHeaderPanel.Controls.Add(this.scheduleDateNavigator);
             this.scheduleHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scheduleHeaderPanel.Location = new System.Drawing.Point(269, 0);
+            this.scheduleHeaderPanel.Location = new System.Drawing.Point(269, 60);
             this.scheduleHeaderPanel.Name = "scheduleHeaderPanel";
             this.scheduleHeaderPanel.Size = new System.Drawing.Size(1062, 60);
             this.scheduleHeaderPanel.TabIndex = 0;
@@ -509,19 +404,6 @@ namespace HotelApp
             this.scheduleSearchPanel.Name = "scheduleSearchPanel";
             this.scheduleSearchPanel.Size = new System.Drawing.Size(650, 60);
             this.scheduleSearchPanel.TabIndex = 1;
-            // 
-            // scheduleSearchDropDown
-            // 
-            this.scheduleSearchDropDown.DropDownAnimationEnabled = true;
-            this.scheduleSearchDropDown.Location = new System.Drawing.Point(21, 8);
-            this.scheduleSearchDropDown.Name = "scheduleSearchDropDown";
-            this.scheduleSearchDropDown.NullText = "Search by room# or guest name";
-            // 
-            // 
-            // 
-            this.scheduleSearchDropDown.RootElement.EnableElementShadow = false;
-            this.scheduleSearchDropDown.Size = new System.Drawing.Size(589, 25);
-            this.scheduleSearchDropDown.TabIndex = 0;
             // 
             // scheduleWeeklyButton
             // 
@@ -547,18 +429,34 @@ namespace HotelApp
             this.scheduleDaysButton.TabIndex = 2;
             this.scheduleDaysButton.Text = "3 Days";
             // 
-            // scheduleDateNavigator
+            // ScheduleRadScheduler
             // 
-            this.scheduleDateNavigator.BackColor = System.Drawing.Color.Transparent;
-            this.scheduleDateNavigator.Dock = System.Windows.Forms.DockStyle.Left;
-            this.scheduleDateNavigator.Location = new System.Drawing.Point(0, 0);
-            this.scheduleDateNavigator.Name = "scheduleDateNavigator";
-            this.scheduleDateNavigator.Size = new System.Drawing.Size(270, 60);
-            this.scheduleDateNavigator.TabIndex = 0;
+            this.ScheduleRadScheduler.Culture = new System.Globalization.CultureInfo("en-US");
+            this.ScheduleRadScheduler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ScheduleRadScheduler.Location = new System.Drawing.Point(269, 60);
+            this.ScheduleRadScheduler.Name = "ScheduleRadScheduler";
+            schedulerDailyPrintStyle1.AppointmentFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            schedulerDailyPrintStyle1.DateEndRange = new System.DateTime(2017, 7, 23, 0, 0, 0, 0);
+            schedulerDailyPrintStyle1.DateHeadingFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            schedulerDailyPrintStyle1.DateStartRange = new System.DateTime(2017, 7, 18, 0, 0, 0, 0);
+            schedulerDailyPrintStyle1.PageHeadingFont = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
+            this.ScheduleRadScheduler.PrintStyle = schedulerDailyPrintStyle1;
+            this.ScheduleRadScheduler.Size = new System.Drawing.Size(1062, 589);
+            this.ScheduleRadScheduler.TabIndex = 4;
+            // 
+            // scheduleRadSchedulerHeader
+            // 
+            this.scheduleRadSchedulerHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.scheduleRadSchedulerHeader.Location = new System.Drawing.Point(269, 0);
+            this.scheduleRadSchedulerHeader.Name = "scheduleRadSchedulerHeader";
+            this.scheduleRadSchedulerHeader.Size = new System.Drawing.Size(1062, 60);
+            this.scheduleRadSchedulerHeader.TabIndex = 3;
             // 
             // scheduleListView
             // 
             this.scheduleListView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.scheduleListView.GroupItemSize = new System.Drawing.Size(200, 28);
+            this.scheduleListView.ItemSize = new System.Drawing.Size(200, 28);
             this.scheduleListView.Location = new System.Drawing.Point(0, 0);
             this.scheduleListView.Name = "scheduleListView";
             this.scheduleListView.Size = new System.Drawing.Size(269, 649);
@@ -569,11 +467,11 @@ namespace HotelApp
             this.HouseKeepingPage.Controls.Add(this.houseKeepingSplitContainer);
             this.HouseKeepingPage.Controls.Add(this.houseKeepingNavigationPanel);
             this.HouseKeepingPage.Controls.Add(this.houseKeepingListView);
-            this.HouseKeepingPage.ItemSize = new System.Drawing.SizeF(105F, 29F);
+            this.HouseKeepingPage.ItemSize = new System.Drawing.SizeF(79F, 25F);
             this.HouseKeepingPage.Location = new System.Drawing.Point(10, 37);
             this.HouseKeepingPage.Name = "HouseKeepingPage";
             this.HouseKeepingPage.Size = new System.Drawing.Size(1331, 649);
-            this.HouseKeepingPage.Text = "HOUSE KEEPING";
+            this.HouseKeepingPage.Text = "التدبير المنزل";
             // 
             // houseKeepingSplitContainer
             // 
@@ -588,6 +486,7 @@ namespace HotelApp
             // 
             this.houseKeepingSplitContainer.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.houseKeepingSplitContainer.Size = new System.Drawing.Size(1062, 589);
+            this.houseKeepingSplitContainer.SplitterWidth = 8;
             this.houseKeepingSplitContainer.TabIndex = 6;
             this.houseKeepingSplitContainer.TabStop = false;
             // 
@@ -601,7 +500,7 @@ namespace HotelApp
             // 
             // 
             this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel1.Size = new System.Drawing.Size(1062, 292);
+            this.splitPanel1.Size = new System.Drawing.Size(1062, 290);
             this.splitPanel1.TabIndex = 0;
             this.splitPanel1.TabStop = false;
             // 
@@ -617,7 +516,7 @@ namespace HotelApp
             schedulerDailyPrintStyle2.DateStartRange = new System.DateTime(2017, 8, 1, 0, 0, 0, 0);
             schedulerDailyPrintStyle2.PageHeadingFont = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
             this.houseKeepingScheduler.PrintStyle = schedulerDailyPrintStyle2;
-            this.houseKeepingScheduler.Size = new System.Drawing.Size(1062, 232);
+            this.houseKeepingScheduler.Size = new System.Drawing.Size(1062, 230);
             this.houseKeepingScheduler.TabIndex = 5;
             // 
             // houseKeepingSchedulerHeaderLabel
@@ -629,18 +528,19 @@ namespace HotelApp
             this.houseKeepingSchedulerHeaderLabel.Size = new System.Drawing.Size(1062, 60);
             this.houseKeepingSchedulerHeaderLabel.TabIndex = 4;
             this.houseKeepingSchedulerHeaderLabel.Text = "radLabel1";
+            this.houseKeepingSchedulerHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // splitPanel2
             // 
             this.splitPanel2.Controls.Add(this.notAssignedGridView);
             this.splitPanel2.Controls.Add(this.notAssignedLabel);
-            this.splitPanel2.Location = new System.Drawing.Point(0, 296);
+            this.splitPanel2.Location = new System.Drawing.Point(0, 298);
             this.splitPanel2.Name = "splitPanel2";
             // 
             // 
             // 
             this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel2.Size = new System.Drawing.Size(1062, 293);
+            this.splitPanel2.Size = new System.Drawing.Size(1062, 291);
             this.splitPanel2.TabIndex = 1;
             this.splitPanel2.TabStop = false;
             // 
@@ -653,7 +553,7 @@ namespace HotelApp
             // 
             this.notAssignedGridView.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.notAssignedGridView.Name = "notAssignedGridView";
-            this.notAssignedGridView.Size = new System.Drawing.Size(1062, 263);
+            this.notAssignedGridView.Size = new System.Drawing.Size(1062, 261);
             this.notAssignedGridView.TabIndex = 2;
             // 
             // notAssignedLabel
@@ -665,6 +565,7 @@ namespace HotelApp
             this.notAssignedLabel.Size = new System.Drawing.Size(1062, 30);
             this.notAssignedLabel.TabIndex = 3;
             this.notAssignedLabel.Text = "Not assigned rooms";
+            this.notAssignedLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // houseKeepingNavigationPanel
             // 
@@ -702,18 +603,11 @@ namespace HotelApp
             this.houseKeepingDaysToggleButton.TabIndex = 5;
             this.houseKeepingDaysToggleButton.Text = "3 Days";
             // 
-            // houseKeepingDateNavigator
-            // 
-            this.houseKeepingDateNavigator.BackColor = System.Drawing.Color.Transparent;
-            this.houseKeepingDateNavigator.Dock = System.Windows.Forms.DockStyle.Left;
-            this.houseKeepingDateNavigator.Location = new System.Drawing.Point(0, 0);
-            this.houseKeepingDateNavigator.Name = "houseKeepingDateNavigator";
-            this.houseKeepingDateNavigator.Size = new System.Drawing.Size(270, 60);
-            this.houseKeepingDateNavigator.TabIndex = 1;
-            // 
             // houseKeepingListView
             // 
             this.houseKeepingListView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.houseKeepingListView.GroupItemSize = new System.Drawing.Size(200, 28);
+            this.houseKeepingListView.ItemSize = new System.Drawing.Size(200, 28);
             this.houseKeepingListView.Location = new System.Drawing.Point(0, 0);
             this.houseKeepingListView.Name = "houseKeepingListView";
             this.houseKeepingListView.Size = new System.Drawing.Size(269, 649);
@@ -724,11 +618,11 @@ namespace HotelApp
             this.ReportsPage.Controls.Add(this.reportsTypePanel);
             this.ReportsPage.Controls.Add(this.reportsStatusPanel);
             this.ReportsPage.Controls.Add(this.reportsHeaderPanel);
-            this.ReportsPage.ItemSize = new System.Drawing.SizeF(64F, 29F);
+            this.ReportsPage.ItemSize = new System.Drawing.SizeF(49F, 25F);
             this.ReportsPage.Location = new System.Drawing.Point(10, 37);
             this.ReportsPage.Name = "ReportsPage";
             this.ReportsPage.Size = new System.Drawing.Size(1331, 649);
-            this.ReportsPage.Text = "REPORTS";
+            this.ReportsPage.Text = "التقارير";
             // 
             // reportsTypePanel
             // 
@@ -740,14 +634,6 @@ namespace HotelApp
             this.reportsTypePanel.Size = new System.Drawing.Size(1331, 199);
             this.reportsTypePanel.TabIndex = 2;
             // 
-            // userControlBookingsByType1
-            // 
-            this.userControlBookingsByType1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlBookingsByType1.Location = new System.Drawing.Point(0, 50);
-            this.userControlBookingsByType1.Name = "userControlBookingsByType1";
-            this.userControlBookingsByType1.Size = new System.Drawing.Size(1331, 149);
-            this.userControlBookingsByType1.TabIndex = 2;
-            // 
             // reportsBookingsByTypeLabel
             // 
             this.reportsBookingsByTypeLabel.AutoSize = false;
@@ -757,6 +643,7 @@ namespace HotelApp
             this.reportsBookingsByTypeLabel.Size = new System.Drawing.Size(1331, 50);
             this.reportsBookingsByTypeLabel.TabIndex = 0;
             this.reportsBookingsByTypeLabel.Text = "Bookings by Type";
+            this.reportsBookingsByTypeLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // reportsStatusPanel
             // 
@@ -768,14 +655,6 @@ namespace HotelApp
             this.reportsStatusPanel.Size = new System.Drawing.Size(1331, 390);
             this.reportsStatusPanel.TabIndex = 1;
             // 
-            // userControlCurrentStatus1
-            // 
-            this.userControlCurrentStatus1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlCurrentStatus1.Location = new System.Drawing.Point(0, 50);
-            this.userControlCurrentStatus1.Name = "userControlCurrentStatus1";
-            this.userControlCurrentStatus1.Size = new System.Drawing.Size(1331, 340);
-            this.userControlCurrentStatus1.TabIndex = 1;
-            // 
             // reportsCurrentStatusLabel
             // 
             this.reportsCurrentStatusLabel.AutoSize = false;
@@ -785,6 +664,7 @@ namespace HotelApp
             this.reportsCurrentStatusLabel.Size = new System.Drawing.Size(1331, 50);
             this.reportsCurrentStatusLabel.TabIndex = 0;
             this.reportsCurrentStatusLabel.Text = "Current Status";
+            this.reportsCurrentStatusLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // reportsHeaderPanel
             // 
@@ -822,12 +702,146 @@ namespace HotelApp
             this.reportsDaysToggleButton.TabIndex = 8;
             this.reportsDaysToggleButton.Text = "3 Days";
             // 
+            // searchTextBoxOverview
+            // 
+            this.searchTextBoxOverview.AutoSize = false;
+            this.searchTextBoxOverview.Location = new System.Drawing.Point(3, 10);
+            this.searchTextBoxOverview.Name = "searchTextBoxOverview";
+            this.searchTextBoxOverview.NullText = "البحث حسب رقم الغرفة أو اسم الضيف";
+            // 
+            // 
+            // 
+            this.searchTextBoxOverview.RootElement.CustomFont = "Roboto";
+            this.searchTextBoxOverview.RootElement.CustomFontSize = 8F;
+            this.searchTextBoxOverview.Size = new System.Drawing.Size(583, 29);
+            this.searchTextBoxOverview.TabIndex = 0;
+            // 
+            // dateNavigatorOverview
+            // 
+            this.dateNavigatorOverview.BackColor = System.Drawing.Color.Transparent;
+            this.dateNavigatorOverview.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dateNavigatorOverview.Location = new System.Drawing.Point(1010, 0);
+            this.dateNavigatorOverview.Name = "dateNavigatorOverview";
+            this.dateNavigatorOverview.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateNavigatorOverview.Size = new System.Drawing.Size(270, 60);
+            this.dateNavigatorOverview.TabIndex = 0;
+            // 
+            // editGuestInfo
+            // 
+            this.editGuestInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editGuestInfo.Location = new System.Drawing.Point(0, 0);
+            this.editGuestInfo.Name = "editGuestInfo";
+            this.editGuestInfo.Size = new System.Drawing.Size(270, 595);
+            this.editGuestInfo.TabIndex = 1;
+            // 
+            // bookingInfoUC
+            // 
+            this.bookingInfoUC.Booking = null;
+            this.bookingInfoUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookingInfoUC.Location = new System.Drawing.Point(0, 0);
+            this.bookingInfoUC.Name = "bookingInfoUC";
+            this.bookingInfoUC.Room = null;
+            this.bookingInfoUC.Size = new System.Drawing.Size(270, 595);
+            this.bookingInfoUC.TabIndex = 0;
+            // 
+            // searchTextBoxBookings
+            // 
+            this.searchTextBoxBookings.AutoSize = false;
+            this.searchTextBoxBookings.Location = new System.Drawing.Point(3, 10);
+            this.searchTextBoxBookings.Name = "searchTextBoxBookings";
+            this.searchTextBoxBookings.NullText = "Search by room# or guest name";
+            // 
+            // 
+            // 
+            this.searchTextBoxBookings.RootElement.CustomFont = "Roboto";
+            this.searchTextBoxBookings.RootElement.CustomFontSize = 8F;
+            this.searchTextBoxBookings.Size = new System.Drawing.Size(590, 29);
+            this.searchTextBoxBookings.TabIndex = 0;
+            // 
+            // dateNavigatorBookings
+            // 
+            this.dateNavigatorBookings.BackColor = System.Drawing.Color.Transparent;
+            this.dateNavigatorBookings.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dateNavigatorBookings.Location = new System.Drawing.Point(0, 0);
+            this.dateNavigatorBookings.Name = "dateNavigatorBookings";
+            this.dateNavigatorBookings.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateNavigatorBookings.Size = new System.Drawing.Size(270, 60);
+            this.dateNavigatorBookings.TabIndex = 0;
+            // 
+            // scheduleBookingInfo
+            // 
+            this.scheduleBookingInfo.Booking = null;
+            this.scheduleBookingInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scheduleBookingInfo.Location = new System.Drawing.Point(0, 0);
+            this.scheduleBookingInfo.Name = "scheduleBookingInfo";
+            this.scheduleBookingInfo.Room = null;
+            this.scheduleBookingInfo.Size = new System.Drawing.Size(270, 529);
+            this.scheduleBookingInfo.TabIndex = 0;
+            // 
+            // scheduleEditGuestInfo
+            // 
+            this.scheduleEditGuestInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scheduleEditGuestInfo.Location = new System.Drawing.Point(0, 0);
+            this.scheduleEditGuestInfo.Name = "scheduleEditGuestInfo";
+            this.scheduleEditGuestInfo.Size = new System.Drawing.Size(270, 529);
+            this.scheduleEditGuestInfo.TabIndex = 0;
+            // 
+            // scheduleSearchDropDown
+            // 
+            this.scheduleSearchDropDown.DropDownAnimationEnabled = true;
+            this.scheduleSearchDropDown.Location = new System.Drawing.Point(21, 8);
+            this.scheduleSearchDropDown.Name = "scheduleSearchDropDown";
+            this.scheduleSearchDropDown.NullText = "Search by room# or guest name";
+            // 
+            // 
+            // 
+            this.scheduleSearchDropDown.RootElement.EnableElementShadow = false;
+            this.scheduleSearchDropDown.Size = new System.Drawing.Size(589, 29);
+            this.scheduleSearchDropDown.TabIndex = 0;
+            // 
+            // scheduleDateNavigator
+            // 
+            this.scheduleDateNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.scheduleDateNavigator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.scheduleDateNavigator.Location = new System.Drawing.Point(0, 0);
+            this.scheduleDateNavigator.Name = "scheduleDateNavigator";
+            this.scheduleDateNavigator.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.scheduleDateNavigator.Size = new System.Drawing.Size(270, 60);
+            this.scheduleDateNavigator.TabIndex = 0;
+            // 
+            // houseKeepingDateNavigator
+            // 
+            this.houseKeepingDateNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.houseKeepingDateNavigator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.houseKeepingDateNavigator.Location = new System.Drawing.Point(0, 0);
+            this.houseKeepingDateNavigator.Name = "houseKeepingDateNavigator";
+            this.houseKeepingDateNavigator.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.houseKeepingDateNavigator.Size = new System.Drawing.Size(270, 60);
+            this.houseKeepingDateNavigator.TabIndex = 1;
+            // 
+            // userControlBookingsByType1
+            // 
+            this.userControlBookingsByType1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlBookingsByType1.Location = new System.Drawing.Point(0, 50);
+            this.userControlBookingsByType1.Name = "userControlBookingsByType1";
+            this.userControlBookingsByType1.Size = new System.Drawing.Size(1331, 149);
+            this.userControlBookingsByType1.TabIndex = 2;
+            // 
+            // userControlCurrentStatus1
+            // 
+            this.userControlCurrentStatus1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlCurrentStatus1.Location = new System.Drawing.Point(0, 50);
+            this.userControlCurrentStatus1.Name = "userControlCurrentStatus1";
+            this.userControlCurrentStatus1.Size = new System.Drawing.Size(1331, 340);
+            this.userControlCurrentStatus1.TabIndex = 1;
+            // 
             // reportsDateNavigator
             // 
             this.reportsDateNavigator.BackColor = System.Drawing.Color.Transparent;
             this.reportsDateNavigator.Dock = System.Windows.Forms.DockStyle.Left;
             this.reportsDateNavigator.Location = new System.Drawing.Point(0, 0);
             this.reportsDateNavigator.Name = "reportsDateNavigator";
+            this.reportsDateNavigator.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.reportsDateNavigator.Size = new System.Drawing.Size(270, 60);
             this.reportsDateNavigator.TabIndex = 2;
             // 
@@ -844,16 +858,15 @@ namespace HotelApp
             ((System.ComponentModel.ISupportInitialize)(this.mainContainer)).EndInit();
             this.mainContainer.ResumeLayout(false);
             this.OverviewPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.overviewMainContainer)).EndInit();
-            this.overviewMainContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.overviewRoomsView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewLeftView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPanelOverview)).EndInit();
             this.navigationPanelOverview.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchContainerOverview)).EndInit();
             this.searchContainerOverview.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxOverview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelEmptyOverview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewMainContainer)).EndInit();
+            this.overviewMainContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.overviewRoomsView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewLeftView)).EndInit();
             this.BookingsPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookingsMainContainer)).EndInit();
             this.bookingsMainContainer.ResumeLayout(false);
@@ -867,22 +880,20 @@ namespace HotelApp
             this.navigationPanelBookings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchContainerBookings)).EndInit();
             this.searchContainerBookings.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxBookings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelEmptyBooking)).EndInit();
             this.SchedulePage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBookingPanel)).EndInit();
             this.scheduleBookingPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ScheduleRadScheduler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleRadSchedulerHeader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleHeaderPanel)).EndInit();
             this.scheduleHeaderPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scheduleSearchPanel)).EndInit();
             this.scheduleSearchPanel.ResumeLayout(false);
             this.scheduleSearchPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleSearchDropDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleWeeklyButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleMonthlyButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleDaysButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScheduleRadScheduler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleRadSchedulerHeader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleListView)).EndInit();
             this.HouseKeepingPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.houseKeepingSplitContainer)).EndInit();
@@ -914,6 +925,9 @@ namespace HotelApp
             ((System.ComponentModel.ISupportInitialize)(this.reportsWeeklyToggleButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsMonthlyToggleButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsDaysToggleButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxOverview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTextBoxBookings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleSearchDropDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

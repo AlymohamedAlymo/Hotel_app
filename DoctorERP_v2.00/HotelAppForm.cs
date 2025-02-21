@@ -39,13 +39,13 @@ namespace HotelApp
 
             culture.DateTimeFormat.DayNames = new string[7]
             {
-                "Sun",
-                "Mon",
-                "Tue",
-                "Wed",
-                "Thu",
-                "Fri",
-                "Sat"
+                "الأحد",
+                "الاثنين",
+                "الثلاثاء",
+                "الأربعاء",
+                "الخميس",
+                "الجمعة",
+                "السبت"
             };
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -67,8 +67,10 @@ namespace HotelApp
             stripElement.ItemContainer.ButtonsPanel.Margin = new System.Windows.Forms.Padding(0, 0, 20, 0);
             themesDropDown.Items.AddRange(new RadListDataItem[]
             {
-                new RadListDataItem("Material") { Image = DoctorERP_v2_00.Properties.Resources.default_small }, new RadListDataItem("MaterialPink") { Image = DoctorERP_v2_00.Properties.Resources.pink_blue_small },
-                new RadListDataItem("MaterialTeal") { Image = DoctorERP_v2_00.Properties.Resources.teal_red_small }, new RadListDataItem("MaterialBlueGrey") { Image = DoctorERP_v2_00.Properties.Resources.blue_grey_green_small }
+                new RadListDataItem("Material") { Image = DoctorERP_v2_00.Properties.Resources.default_small },
+                new RadListDataItem("MaterialPink") { Image = DoctorERP_v2_00.Properties.Resources.pink_blue_small },
+                new RadListDataItem("MaterialTeal") { Image = DoctorERP_v2_00.Properties.Resources.teal_red_small },
+                new RadListDataItem("MaterialBlueGrey") { Image = DoctorERP_v2_00.Properties.Resources.blue_grey_green_small }
             });
             themesDropDown.SelectedIndex = 0;
             themesDropDown.SelectedIndexChanged += delegate (object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
@@ -239,15 +241,15 @@ namespace HotelApp
 
         private void HotelApp_Load(object sender, EventArgs e)
         {
-            LightVisualElement lve = new LightVisualElement();
-            ////lve.Image = DoctorERP_v2_00.Properties.Resources.stars;
-            this.FormElement.TitleBar.Children[2].Children.Insert(0, lve);
-            lve.Margin = new Padding(15, 0, 0, 0);
+            //LightVisualElement lve = new LightVisualElement();
+            //////lve.Image = DoctorERP_v2_00.Properties.Resources.stars;
+            //this.FormElement.TitleBar.Children[2].Children.Insert(0, lve);
+            //lve.Margin = new Padding(15, 0, 0, 0);
             this.FormElement.TitleBar.TitlePrimitive.Margin = new Padding(2, 2, 0, 0);
             this.FormElement.TitleBar.TitlePrimitive.CustomFont = Utils.MainFont;
             this.FormElement.TitleBar.TitlePrimitive.CustomFontSize = 10.5f;
             this.FormElement.TitleBar.TitlePrimitive.TextAlignment = ContentAlignment.MiddleLeft;
-            this.Text = "Hotel App";
+            this.Text = "برنامج إدارة الفنادق";
             this.Size = new System.Drawing.Size(1365, 900);
             this.Icon = DoctorERP_v2_00.Properties.Resources.starsIcon;
             this.ShowIcon = true;
@@ -840,15 +842,15 @@ namespace HotelApp
 
             guests.Add(new Guest("1", "علي محمد", "New Balance 5th Avenue Mile 2017", "مصر", "615-555-0169",
                 new CreditCard("379683588302311", DateTime.Now.AddYears(3), 387)));
-            guests.Add(new Guest("2", "Andrew Fuller", "514 S. Magnolia St. ", "Orlando", "615-555-0169",
+            guests.Add(new Guest("2", "احمد السيد", "514 S. Magnolia St. ", "القاهرة", "615-555-0169",
                 new CreditCard("346534548327544", DateTime.Now.AddYears(2), 124)));
-            guests.Add(new Guest("3", "Janet Leverling", "70 Bowman St. ", "South Windsor", "615-555-0169",
+            guests.Add(new Guest("3", "محمود حسن", "70 Bowman St. ", "البحيرة", "615-555-0169",
                 new CreditCard("340505947817695", DateTime.Now.AddYears(6), 547)));
-            guests.Add(new Guest("4", "Robert King", "123 6th St.", "Melbourne", "615-555-0169",
+            guests.Add(new Guest("4", "رفعت السيد", "123 6th St.", "اسوان", "615-555-0169",
                 new CreditCard("346205975312347", DateTime.Now.AddYears(4), 138)));
-            guests.Add(new Guest("5", "Laura Callahan", "4 Goldfield Rd.", "Honolulu", "615-555-0169",
+            guests.Add(new Guest("5", "لارا حسين", "4 Goldfield Rd.", "كفر الدوار", "615-555-0169",
                 new CreditCard("340434526813746", DateTime.Now.AddYears(1), 114)));
-            guests.Add(new Guest("6", "Michael Suyama", "2 Coffee Street ", "Bergenfield", "615-555-0169",
+            guests.Add(new Guest("6", "مايكل عادل", "2 Coffee Street ", "الاسكندرية", "615-555-0169",
                 new CreditCard("374041199394364", DateTime.Now.AddYears(3), 864)));
 
             DateTime start = DateTime.Today;

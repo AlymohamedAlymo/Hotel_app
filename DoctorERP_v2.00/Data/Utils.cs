@@ -33,13 +33,13 @@ namespace HotelApp.Data
             switch (houseKeepingStatus)
             {
                 case HouseKeepingStatus.Clean:
-                    return "Clean";
+                    return "نظيف";
                 case HouseKeepingStatus.NotClean:
-                    return "Not clean";
+                    return "غير نظيف";
                 case HouseKeepingStatus.InProgress:
-                    return "In progress";
+                    return "قيد التقدم";
                 default:
-                    return "N/A";
+                    return "غير متاح";
             }
         }
 
@@ -48,15 +48,15 @@ namespace HotelApp.Data
             switch (roomType)
             {
                 case RoomType.Single:
-                    return "Single";
+                    return "فردي";
                 case RoomType.Double:
-                    return "Double";
+                    return "زوحي";
                 case RoomType.Triple:
-                    return "Triple";//"Family (3)";
+                    return "ثلاثي";//"Family (3)";
                 case RoomType.Family:
-                    return "Family"; //"Family (4)";
+                    return "عائلي"; //"Family (4)";
                 default:
-                    return "N/A";
+                    return "غير متاح";
             }
         }
 
@@ -195,15 +195,15 @@ namespace HotelApp.Data
             switch (roomStatus)
             {
                 case RoomStatus.Reserved:
-                    return "Reserved";
+                    return "محجوز";
                 case RoomStatus.Occupied:
-                    return "Occupied";
+                    return "مشغول";
                 case RoomStatus.Available:
-                    return "Available";
+                    return "متاح";
                 case RoomStatus.CheckedOut:
-                    return "Checked-Out";
+                    return "تم تسجيل الخروج";
                 default:
-                    return "N/A";
+                    return "غير متاح";
             }
         }
 
@@ -229,17 +229,17 @@ namespace HotelApp.Data
             switch (bk)
             {
                 case BookingStatus.Reservation:
-                    return "Reservation";
+                    return "حجز";
                 case BookingStatus.Actual:
-                    return "Actual";
+                    return "فِعلي";
                 case BookingStatus.Cancelled:
-                    return "Cancelled";
+                    return "تم الإلغاء";
                 case BookingStatus.CheckedOut:
-                    return "Checked out";
+                    return "تم الخروج";
                 case BookingStatus.NoShow:
-                    return "No-show";
+                    return "عدم الحضور";
                 default:
-                    return "N/A";
+                    return "غير متاح";
             }
         }
 
