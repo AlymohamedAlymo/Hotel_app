@@ -893,7 +893,7 @@ namespace HotelApp
             Array statusOptions = Enum.GetValues(typeof(RoomStatus));
             foreach (object item in statusOptions)
             {
-                ListViewDataItem statusItem = new ListViewDataItem(item.ToString());
+                ListViewDataItem statusItem = new ListViewDataItem(Utils.GetRoomStatus((RoomStatus)item));
                 statusItem.CheckState = Telerik.WinControls.Enumerations.ToggleState.On;
                 this.overviewLeftView.Items.Add(statusItem);
                 statusItem.Group = statusGroup;
@@ -903,13 +903,13 @@ namespace HotelApp
             foreach (object item in roomOptions)
             {
                 ListViewDataItem roomTypeItem = new ListViewDataItem(Utils.GetRoomType((RoomType)item));
-                roomTypeItem.Value = (RoomType)item;
                 roomTypeItem.CheckState = Telerik.WinControls.Enumerations.ToggleState.On;
                 roomTypeItem.Group = typesGroup;
                 this.overviewLeftView.Items.Add(roomTypeItem);
             }
 
         }
+
 
         internal ListViewDataItem GetItemByRoomId(int roomId)
         {

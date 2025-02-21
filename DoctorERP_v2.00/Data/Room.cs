@@ -276,6 +276,7 @@ namespace HotelApp
         CheckedOut
     }
 
+
     public enum RoomType
     {
         Single,

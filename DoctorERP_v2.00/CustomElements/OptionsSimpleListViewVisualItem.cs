@@ -132,27 +132,45 @@ namespace HotelApp
                     this.countImage.Image = null;
                     this.countElement.Text = GetRoomsByStatus(RoomStatus.CheckedOut);
                 }
-                else if ((RoomType)this.Data.Value == RoomType.Single)
+                else if (GetRoomType(this.Data.Value.ToString()) == RoomType.Single)
                 {
                     this.countImage.Image = Utils.GetRoomIconByType(RoomType.Single);
                     this.countElement.Text = GetRoomsByType(RoomType.Single);
                 }
-                else if ((RoomType)this.Data.Value == RoomType.Double)
+                else if (GetRoomType(this.Data.Value.ToString()) == RoomType.Double)
                 {
                    this.countImage.Image = Utils.GetRoomIconByType(RoomType.Double);
                    this.countElement.Text = GetRoomsByType(RoomType.Double);
                 }
-                else if ((RoomType)this.Data.Value == RoomType.Triple)
+                else if (GetRoomType(this.Data.Value.ToString()) == RoomType.Triple)
                 {
                     this.countImage.Image = Utils.GetRoomIconByType(RoomType.Triple);
                     this.countElement.Text = GetRoomsByType(RoomType.Triple);
                 }
-                else if ((RoomType)this.Data.Value == RoomType.Family)
+                else if (GetRoomType(this.Data.Value.ToString()) == RoomType.Family)
                 {
                     this.countImage.Image = Utils.GetRoomIconByType(RoomType.Family);
                     this.countElement.Text = GetRoomsByType(RoomType.Family);
                 }
             }
+        }
+
+        private static RoomType GetRoomType(string roomType)
+        {
+            switch (roomType)
+            {
+                case "زوجي":
+                    return RoomType.Double;
+                case "عائلي":
+                    return RoomType.Family;
+                case "ثلاثي":
+                    return RoomType.Triple;
+                case "فردي":
+                    return RoomType.Single;
+                default:
+                    return RoomType.Single;
+            }
+
         }
 
         private string GetRoomsByHouseKeeper(string name)

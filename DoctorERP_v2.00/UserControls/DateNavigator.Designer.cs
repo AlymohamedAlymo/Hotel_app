@@ -40,16 +40,16 @@
             // 
             // rightNavigationButton
             // 
-            this.rightNavigationButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightNavigationButton.Location = new System.Drawing.Point(240, 0);
+            this.rightNavigationButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rightNavigationButton.Location = new System.Drawing.Point(30, 0);
             this.rightNavigationButton.Name = "rightNavigationButton";
             this.rightNavigationButton.Size = new System.Drawing.Size(30, 49);
             this.rightNavigationButton.TabIndex = 0;
             // 
             // leftNavigationButton
             // 
-            this.leftNavigationButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.leftNavigationButton.Location = new System.Drawing.Point(210, 0);
+            this.leftNavigationButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftNavigationButton.Location = new System.Drawing.Point(0, 0);
             this.leftNavigationButton.Name = "leftNavigationButton";
             this.leftNavigationButton.Size = new System.Drawing.Size(30, 49);
             this.leftNavigationButton.TabIndex = 1;
@@ -58,19 +58,19 @@
             // 
             this.dateLabel.AutoSize = false;
             this.dateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateLabel.Location = new System.Drawing.Point(35, 0);
+            this.dateLabel.Location = new System.Drawing.Point(60, 0);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(175, 49);
             this.dateLabel.TabIndex = 2;
             this.dateLabel.Text = "radLabel1";
-            this.dateLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.dateLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // navigatorDateTimePicker
             // 
             this.navigatorDateTimePicker.AutoSize = false;
             this.navigatorDateTimePicker.CalendarSize = new System.Drawing.Size(290, 320);
-            this.navigatorDateTimePicker.Dock = System.Windows.Forms.DockStyle.Left;
-            this.navigatorDateTimePicker.Location = new System.Drawing.Point(0, 0);
+            this.navigatorDateTimePicker.Dock = System.Windows.Forms.DockStyle.Right;
+            this.navigatorDateTimePicker.Location = new System.Drawing.Point(235, 0);
             this.navigatorDateTimePicker.Name = "navigatorDateTimePicker";
             this.navigatorDateTimePicker.Size = new System.Drawing.Size(35, 49);
             this.navigatorDateTimePicker.TabIndex = 3;
@@ -84,8 +84,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.navigatorDateTimePicker);
-            this.Controls.Add(this.leftNavigationButton);
             this.Controls.Add(this.rightNavigationButton);
+            this.Controls.Add(this.leftNavigationButton);
             this.Name = "DateNavigator";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(270, 49);
